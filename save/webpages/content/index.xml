@@ -2,38 +2,21 @@
 <!DOCTYPE MyCoReWebPage>
 <MyCoReWebPage>
 
-  <section title="Willkommen bei MIR!" xml:lang="de">
-        <div class="jumbotwo" >
+  <section title="Willkommen auf den Seiten des Publikationsservers der TiHo Hannover" xml:lang="de">
+        <div class="container" >
             <div class="row">
 
                 <div class="col-xs-12">
-                    <h2>Mods Institutional Repository (MIR)</h2>
+                    <h2>Publikationsserver der TiHo Hannover</h2>
+                    <p>
+                      Hier entsteht der Publikationsserver der Stiftung Tierärztliche Hochschule Hannover (TiHo).
+                    </p>
                 </div>
 
-                <div class="col-md-4">
-                    <h3><span class="fa fa-check"></span> fertig</h3>
-                    <p>MIR ist eine MyCoRe-Software, die mit nur wenigen Anpassungen
-                    - so wie sie ist - als Repositorium eingesetzt werden kann.</p>
-                    <p><a class="btn btn-default" href="http://mycore.de/documentation/getting_started/mir.html" role="button">weitere Informationen »</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h3><span class="fa fa-flash"></span> mächtig</h3>
-                    <p>MIR verwendet das mächtige und bewährte MODS-Datenmodell. Den
-                    Kern der Webanwendung bildet MyCoRe mit einer Vielzahl von Funktionen.</p>
-                    <p><a class="btn btn-default" href="http://mycore.de/features/index.html" role="button">weitere Informationen »</a></p>
-                </div>
-                <div class="col-md-4">
-
-                    <h3><span class="fa fa-heart"></span> lebendig</h3>
-                    <p>MIR basiert auf dem Software-Kern MyCoRe, der kontinuierlich
-                    weiter entwickelt wird. Eine lebendige Community setzt MIR in
-                    ihren Anwendungen ein.</p>
-                    <p><a class="btn btn-default" href="http://mycore.de/support/index.html" role="button">weitere Informationen »</a></p>
-                </div>
             </div>
         </div>
   </section>
   <meta>
-    <log date="2015-05-22" time="11:12" labelPath=" » Start" lastEditor="Kathleen Neumann" />
+    <log date="2017-11-14" time="18:12" labelPath=" » Start" lastEditor="Kathleen Neumann" />
   </meta>
 </MyCoReWebPage>
