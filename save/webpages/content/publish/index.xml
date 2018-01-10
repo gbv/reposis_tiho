@@ -75,7 +75,7 @@
 <!-- ppn -->
       <div id="more_options_box" class="row form-group">
         <h2>Publikation aus Scopus, PubMed, CrossRef oder GVK importieren</h2>
-        <div class="row form-group">
+        <!-- div class="row form-group">
           <label class="col-sm-3 col-lg-2 control-label">
             <select name="scopusField">
               <option value="scopus_id">Scopus ID:</option>
@@ -97,7 +97,7 @@
           <div class="col-sm-7 col-md-5 col-lg-4">
             <input class="form-control" type="text" name="PubMedID" />
           </div>
-        </div>
+        </div -->
         <div class="row form-group">
           <label class="col-sm-3 col-lg-2 control-label">CrossRef DOI:</label>
           <div class="col-sm-7 col-md-5 col-lg-4">
