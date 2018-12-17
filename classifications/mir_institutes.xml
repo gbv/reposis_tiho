@@ -1,84 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
-  <label xml:lang="en" text="Sample Institutions" description="A list of institutions" />
-  <label xml:lang="de" text="Beispiel-Einrichtungen" description="Liste der Einrichtungen" />
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
+  <label xml:lang="en" text="Institutions of TiHo Hannover" description="A list of institutions" />
+  <label xml:lang="de" text="Einrichtungen der TiHo Hannover" description="Liste der Einrichtungen" />
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_institutes" />
   <categories>
+    <category ID="kliniken">
+      <label xml:lang="de" text="Kliniken der Tierärztlichen Hochschule" />
+      <category ID="11">
+        <label xml:lang="de" text="Klinik für Rinder" />
+        <label xml:lang="en" text="Clinic for Cattle" />
+      </category>
+      <category ID="12">
+        <label xml:lang="de" text="Klinik für Pferde" />
+        <label xml:lang="en" text="Clinic for Horses" />
+      </category>
+      <category ID="13">
+        <label xml:lang="de" text="Klinik für Kleintiere" />
+        <label xml:lang="en" text="Small Animal Clinic" />
+      </category>
+      <category ID="14">
+        <label xml:lang="en" text="Clinic for Swine, Small Ruminants and Forensic Medicine" />
+        <label xml:lang="de" text="Klinik für kleine Klauentiere und Forensische Medizin / Ambulatorische Klinik" />
+      </category>
+      <category ID="15">
+        <label xml:lang="de" text="Klinik für Geflügel" />
+        <label xml:lang="en" text="Clinic for Poultry" />
+      </category>
+      <category ID="77">
+        <label xml:lang="en" text="Unit of Reproductive Medicine of the clinics" />
+        <label xml:lang="de" text="Reproduktionsmedizinische Einheiten der Kliniken" />
+      </category>
+      <category ID="78">
+        <label xml:lang="de" text="Klinik für Heimtiere, Reptilien, Zier- und Wildvögel" />
+        <label xml:lang="en" text="Clinic for small mammals, reptiles and birds" />
+      </category>
+    </category>
+    <category ID="institute">
+      <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
+      <label xml:lang="de" text="Institute der Tierärztlichen Hochschule" />
+      <category ID="18">
+        <label xml:lang="en" text="Institute for Microbiology" />
+        <label xml:lang="de" text="Institut für Mikrobiologie, Zentrum für Infektionsmedizin" />
+      </category>
+      <category ID="19">
+        <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
+        <label xml:lang="de" text="Institut für Parasitologie, Zentrum für Infektionsmedizin" />
+      </category>
+      <category ID="20">
+        <label xml:lang="de" text="Institut für Pathologie" />
+        <label xml:lang="en" text="Institute for Pathology" />
+      </category>
+      <category ID="21">
+        <label xml:lang="de" text="Institut für Virologie, Zentrum für Infektionsmedizin" />
+        <label xml:lang="en" text="Institute of Virology, Dept. of Infectious Diseases" />
+      </category>
+      <category ID="23">
+        <label xml:lang="de" text="Institut für Biometrie, Epidemiologie und Informationsverarbeitung" />
+        <label xml:lang="en" text="Institute for Biometry, Epidemiology and Information Processing" />
+      </category>
+      <category ID="24">
+        <label xml:lang="de" text="Institut für Tierernährung" />
+        <label xml:lang="en" text="Institute for Animal Nutrition" />
+      </category>
+      <category ID="25">
+        <label xml:lang="en" text="Institute for Animal Breeding and Genetics" />
+        <label xml:lang="de" text="Institut für Tierzucht und Vererbungsforschung" />
+      </category>
+      <category ID="26">
+        <label xml:lang="en" text="Institute for Animal Hygiene, Animal Welfare and Farm Animal Behaviour" />
+        <label xml:lang="de" text="Institut für Tierhygiene, Tierschutz und Nutztierethologie" />
+      </category>
+      <category ID="27">
+        <label xml:lang="en" text="Institute for Anatomy" />
+        <label xml:lang="de" text="Anatomisches Institut" />
+      </category>
+      <category ID="28">
+        <label xml:lang="en" text="Institute for Animal Ecology and Cell Biology" />
+        <label xml:lang="de" text="Institut für Tierökologie und Zellbiologie" />
+      </category>
+      <category ID="30">
+        <label xml:lang="de" text="Physiologisches Institut" />
+        <label xml:lang="en" text="Institute for Physiology" />
+      </category>
+      <category ID="31">
+        <label xml:lang="en" text="Institute for Biochemistry" />
+        <label xml:lang="de" text="Institut für Physiologische Chemie" />
+      </category>
+      <category ID="32">
+        <label xml:lang="en" text="Department of Pharmacology, Toxicology and Pharmacy" />
+        <label xml:lang="de" text="Institut für Pharmakologie, Toxikologie und Pharmazie" />
+      </category>
+      <category ID="33">
+        <label xml:lang="en" text="Institute of Zoology" />
+        <label xml:lang="de" text="Institut für Zoologie" />
+      </category>
+      <category ID="57">
+        <label xml:lang="de" text="Institut für Wildtierforschung" />
+        <label xml:lang="en" text="Institute for Terrestrial and Aquatic Wildlife Research" />
+      </category>
+      <category ID="49">
+        <label xml:lang="de" text="Institut für Tierschutz und Verhalten" />
+        <label xml:lang="en" text="Institute for Animal Welfare and Behaviour" />
+      </category>
+      <category ID="70">
+        <label xml:lang="en" text="Institute for Food Quality and Food Safety" />
+        <label xml:lang="de" text="Institut für Lebensmittelqualität und -sicherheit" />
+      </category>
+      <category ID="71">
+        <label xml:lang="en" text="Institute for Food Toxicology" />
+        <label xml:lang="de" text="Institut für Lebensmitteltoxikologie und Chemische Analytik" />
+      </category>
+      <category ID="80">
+        <label xml:lang="de" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
+        <label xml:lang="en" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
+      </category>
+    </category>
+    <category ID="fachgebiete">
+      <label xml:lang="de" text="Fachgebiete und Außenstellen der Tierärztlichen Hochschule" />
+      <category ID="34">
+        <label xml:lang="de" text="Fachgebiet Geschichte der Veterinärmedizin" />
+        <label xml:lang="en" text="Institute for the History of Veterinary Medicine and Domestic Animals" />
+      </category>
+      <category ID="35">
+        <label xml:lang="en" text="Institute for General Radiology and Medical Physics" />
+        <label xml:lang="de" text="Fachgebiet Allgemeine Radiologie und Medizinische Physik" />
+      </category>
+      <category ID="36">
+        <label xml:lang="en" text="Fish Pathology and Fish Farming (integrated into the Institute of Parasitology)" />
+        <label xml:lang="de" text="Abteilung Fischkrankheiten und Fischhaltung (Institut für Parasitologie)" />
+      </category>
+      <category ID="39">
+        <label xml:lang="en" text="Institute for Immunology" />
+        <label xml:lang="de" text="Arbeitsgruppe Immunologie" />
+      </category>
+      <category ID="40">
+        <label xml:lang="de" text="Außenstelle für Epidemiologie (Bakum)" />
+        <label xml:lang="en" text="Field Station for Epidemiology in Bakum" />
+      </category>
+    </category>
     <category ID="Unis">
-      <label xml:lang="de" text="Universität in Deutschland" />
-      <label xml:lang="en" text="Universities of Germany" />
-      <category ID="Unis.Dresden">
-        <label xml:lang="de" text="Universität Dresden" />
-        <label xml:lang="en" text="Dresden University" />
-        <url xlink:href="http://www.uni-dresden.de/" />
-      </category>
-      <category ID="Unis.Essen">
-        <label xml:lang="de" text="Universität Duisburg-Essen" />
-        <label xml:lang="en" text="Duisburg-Essen University" />
-        <url xlink:href="http://www.uni-duisburg-essen.de/" />
-      </category>
-      <category ID="Unis.Freiburg">
-        <label xml:lang="de" text="Universität Freiburg" />
-        <label xml:lang="en" text="Freiburg University" />
-        <url xlink:href="http://www.uni-freiburg.de/" />
-      </category>
-      <category ID="Unis.Greifswald">
-        <label xml:lang="de" text="Universität Greifswald" />
-        <label xml:lang="en" text="University of Greifswald" />
-        <url xlink:href="http://www.uni-greifswald.de/" />
-      </category>
-      <category ID="Unis.Hamburg">
-        <label xml:lang="de" text="Universität Hamburg" />
-        <label xml:lang="en" text="University of Hamburg" />
-        <url xlink:href="http://www.uni-hamburg.de/" />
-      </category>
-      <category ID="Unis.Jena">
-        <label xml:lang="de" text="Universität Jena" />
-        <label xml:lang="en" text="Jena University" />
-        <url xlink:href="http://www.uni-jena.de/" />
-      </category>
-      <category ID="Unis.Kiel">
-        <label xml:lang="de" text="Universität Kiel" />
-        <label xml:lang="en" text="Kiel University" />
-        <url xlink:href="http://www.uni-kiel.de/" />
-      </category>
-      <category ID="Unis.Leipzig">
-        <label xml:lang="de" text="Universität Leipzig" />
-        <label xml:lang="en" text="Leipzig University" />
-        <url xlink:href="http://www.uni-leipzig.de/" />
-      </category>
-      <category ID="Unis.TUMuenchen">
-        <label xml:lang="de" text="Technische Universität München" />
-        <label xml:lang="en" text="Technical University of München" />
-        <url xlink:href="http://www.tu-muenchen.de/" />
-      </category>
-      <category ID="Unis.Muenster">
-        <label xml:lang="de" text="Universität Münster" />
-        <label xml:lang="en" text="University of Münster" />
-        <url xlink:href="http://www.uni-muenster.de/" />
-      </category>
-      <category ID="Unis.Rostock">
-        <label xml:lang="de" text="Universität Rostock" />
-        <label xml:lang="en" text="University of Rostock" />
-        <url xlink:href="http://www.uni-rostock.de/" />
-      </category>
-    </category>
-    <category ID="Firma">
-      <label xml:lang="de" text="Firmen in Deutschland" />
-      <label xml:lang="en" text="Companies in Germany" />
-      <category ID="Firma.IBM">
-        <label xml:lang="de" text="IBM" />
-        <label xml:lang="en" text="IBM" />
-      </category>
-      <category ID="Firma.Reber">
-        <label xml:lang="de" text="DUR Consult" />
-        <label xml:lang="en" text="DUR Consult" />
-      </category>
-    </category>
-    <category ID="Other">
-      <label xml:lang="de" text="Andere" />
-      <label xml:lang="en" text="Other" />
+      <label xml:lang="de" text="Kliniken der Tierärztlichen Hochschule" />
+      <label xml:lang="en" text="Clinics of the University of Veterinary Medicine" />
     </category>
   </categories>
 </mycoreclass>
