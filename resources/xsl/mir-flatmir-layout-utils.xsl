@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
     xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
     xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-    exclude-result-prefixes="mcrver mcrxsl">
+    exclude-result-prefixes="i18n mcrver mcrxsl">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
@@ -45,19 +46,32 @@
           <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form navbar-left pull-right" role="search">
             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
             <div class="form-group">
-              <input name="condQuery" placeholder="Suche" class="form-control search-query" id="searchInput" type="text" />
-              <xsl:if test="not(mcrxsl:isCurrentUserGuestUser())">
+              <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                  <input name="owner" type="hidden" value="createdby:*" />
+                </xsl:when>
+                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
                 <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-              </xsl:if>
+                </xsl:when>
+              </xsl:choose>
             </div>
           </form>
         </div>
 
         <nav class="collapse navbar-collapse mir-main-nav-entries">
           <ul class="nav navbar-nav pull-left">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+            <xsl:for-each select="$loaded_navigation_xml/menu">
+              <xsl:choose>
+                <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                <xsl:when test="@id='brand'"/>
+                <xsl:when test="@id='below'"/>
+                <xsl:when test="@id='user'"/>
+                <xsl:otherwise>
+                  <xsl:apply-templates select="."/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
             <xsl:call-template name="mir.basketMenu" />
           </ul>
         </nav>
