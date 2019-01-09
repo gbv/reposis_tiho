@@ -1,4 +1,11 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
 
+html body {
+  margin-bottom: 40px; /* Margin bottom by footer height */
+}
 
 /* ----------------------------------------------------------------------------
    Navigation
@@ -10,6 +17,9 @@
   color: #939393;
 }
 
+.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a:hover,
+.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a:focus,
+.mir-main-nav nav .navbar-nav .dropdown-menu > .active > a,
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a:hover,
 .mir-main-nav nav .navbar-nav .dropdown-menu > li > a:focus,
 .mir-main-nav nav .navbar-nav > li > a:hover {
@@ -28,8 +38,28 @@
 html body #powered_by {
   background-color: #e5ded0;
   border-top: 0px solid #d3c7af;
+  padding: 0 0 2em 0;
 }
 
 .flatmir-footer {
+  margin-top: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   border-top: 1px solid #d3c7af;
+  height: 40px; /* Set the fixed height of the footer here */
+}
+
+.flatmir-footer .container {
+  margin-bottom: 0px;
+}
+
+.flatmir-footer .nav > li > a {
+  display: inline;
+  color: #939393;
+}
+
+.flatmir-footer .nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: underline;
+  background-color: transparent;
 }
