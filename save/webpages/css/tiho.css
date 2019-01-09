@@ -4,7 +4,7 @@ html {
 }
 
 html body {
-  margin-bottom: 40px; /* Margin bottom by footer height */
+  margin-bottom: 120px; /* Margin bottom by footer height */
 }
 
 /* ----------------------------------------------------------------------------
@@ -43,6 +43,7 @@ html body #powered_by {
 
 .flatmir-footer {
   margin-top: 0;
+  margin-bottom: 54px;
   position: absolute;
   bottom: 0;
   width: 100%;
