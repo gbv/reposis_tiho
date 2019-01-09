@@ -36,14 +36,14 @@
       </category>
     </category>
     <category ID="institute">
-      <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
+      <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
       <label xml:lang="de" text="Institute der Tierärztlichen Hochschule" />
       <category ID="18">
         <label xml:lang="en" text="Institute for Microbiology" />
         <label xml:lang="de" text="Institut für Mikrobiologie, Zentrum für Infektionsmedizin" />
       </category>
       <category ID="19">
-        <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
+        <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
         <label xml:lang="de" text="Institut für Parasitologie, Zentrum für Infektionsmedizin" />
       </category>
       <category ID="20">

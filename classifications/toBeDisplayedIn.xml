@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="toBeDisplayedIn">
+  <label xml:lang="en" text="To be displayed in" />
+  <label xml:lang="x-uri" text="http://elib.tiho-hannover.de/api/v1/classifications/toBeDisplayedIn" />
+  <label xml:lang="de" text="Anzuzeigen in" />
+  <categories>
+    <category ID="bibliography">
+      <label xml:lang="en" text="Bibliography" />
+      <label xml:lang="de" text="Bibliographie" />
+    </category>
+  </categories>
+</mycoreclass>

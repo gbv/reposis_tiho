@@ -85,9 +85,15 @@
   </xsl:template>
 
   <xsl:template name="mir.footer">
-    <!-- div class="container">
-
-    </div -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="internal_links nav navbar-nav">
+              <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
+            </ul>
+          </div>
+        </div>
+      </div>
   </xsl:template>
 
   <xsl:template name="mir.powered_by">

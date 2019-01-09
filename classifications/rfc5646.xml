@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="rfc5646">
-  <label xml:lang="en" text="Language" description="as defined in RFC 5646" />
   <label xml:lang="x-auth" text="rfc5646" />
-  <label xml:lang="it" text="Lingue" description="RFC 5646" />
   <label xml:lang="de" text="Sprache" description="nach RFC 5646" />
+  <label xml:lang="en" text="Language" description="as defined in RFC 5646" />
+  <label xml:lang="it" text="Lingue" description="RFC 5646" />
   <categories>
     <category ID="de">
       <label xml:lang="en" text="German" />
@@ -34,8 +34,8 @@
       <label xml:lang="x-term" text="ita" />
     </category>
     <category ID="es">
-      <label xml:lang="x-bibl" text="spa" />
       <label xml:lang="it" text="spagnolo" />
+      <label xml:lang="x-bibl" text="spa" />
       <label xml:lang="de" text="Spanisch" />
       <label xml:lang="x-term" text="spa" />
       <label xml:lang="en" text="Spanish" />
@@ -78,8 +78,8 @@
     <category ID="no">
       <label xml:lang="en" text="Norwegian" />
       <label xml:lang="x-bibl" text="nor" />
-      <label xml:lang="de" text="Norwegisch" />
       <label xml:lang="x-term" text="nor" />
+      <label xml:lang="de" text="Norwegisch" />
       <label xml:lang="it" text="norvegese" />
     </category>
     <category ID="pl">
@@ -118,8 +118,8 @@
       <label xml:lang="en" text="Romanian" />
     </category>
     <category ID="cs">
-      <label xml:lang="en" text="Czech" />
       <label xml:lang="it" text="ceco" />
+      <label xml:lang="en" text="Czech" />
       <label xml:lang="x-term" text="cze" />
       <label xml:lang="de" text="Tschechisch" />
       <label xml:lang="x-bibl" text="cze" />
@@ -247,8 +247,8 @@
       <label xml:lang="it" text="kirundi" />
       <label xml:lang="x-term" text="run" />
       <label xml:lang="de" text="Kirundisch" />
-      <label xml:lang="en" text="Rundi" />
       <label xml:lang="x-bibl" text="run" />
+      <label xml:lang="en" text="Rundi" />
     </category>
   </categories>
 </mycoreclass>
