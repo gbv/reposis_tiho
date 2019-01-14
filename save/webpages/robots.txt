@@ -1,4 +1,4 @@
-Sitemap: http://reposis-test.gbv.de/tiho/sitemap_google.xml
+Sitemap: https://elib.tiho-hannover.de/sitemap_google.xml
 User-agent: *
 Allow: /servlets/MCRFileNodeServlet/
 Disallow: /*?
