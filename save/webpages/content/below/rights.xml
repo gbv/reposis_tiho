@@ -27,8 +27,8 @@
     <p>
         Eine Anmeldung (Login) mit persönlichen Daten ist nur zur Veröffentlichung von Publikationen durch Hochschulangehörige
         erforderlich, nicht für die Suche nach oder den lesenden Zugriff auf Publikationen. Zur Veröffentlichung melden sich
-        Hochschulangehörige mit ihrer Uni-Kennung an. Die Autorisierung erfolgt gegen Identity Provider (Shibboleth) der TiHo
-        Hannover. Das Repositorium verarbeitet und speichert dabei folgende Nutzerdaten: 
+        Hochschulangehörige mit ihrer Uni-Kennung an. Die Autorisierung erfolgt gegen den IDP (Identity Provider - DFN-AAI Shibboleth)
+        der Stiftung Tierärztliche Hochschule Hannover. Das Repositorium verarbeitet und speichert dabei folgende Nutzerdaten:
     </p>
     <ul>
         <li>Name</li>
