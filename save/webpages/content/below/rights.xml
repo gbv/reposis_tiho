@@ -1,29 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="neuer Eintrag"><div>
-<h2>Datenschutz</h2>
-
-<h3>Grundlegendes</h3>
-
-<p>Diese Datenschutzerklärung soll die Nutzer dieser Plattform über die Art, den Umfang und den Zweck der Erhebung und Verwendung personenbezogener Daten durch die Betreiber (siehe Kontakt) informieren.</p>
-
-<p>Die Plattformbetreiber nehmen Ihren Datenschutz sehr ernst und behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Vorschriften. Da durch neue Technologien und die ständige Weiterentwicklung dieses Service Änderungen an dieser Datenschutzerklärung vorgenommen werden können, empfehlen wir Ihnen sich die Datenschutzerklärung in regelmäßigen Abständen wieder durchzulesen.</p>
-
-<h3>Cookies</h3>
-
-<p>Diese Dienstleistung verwendet Cookies zur pseudonymisierten Reichweitenmessung. Bei Cookies handelt es sich um kleine Dateien, welche auf Ihrem Endgerät gespeichert werden. Ihr Browser greift auf diese Dateien zu. Durch den Einsatz von Cookies erhöht sich die Benutzerfreundlichkeit und Sicherheit dieser Plattform. Nutzungsdaten werden nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht als Besucher/in persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten dienen ausschließlich der Verbesserung des Publikationsservers, den die Betreiber von TiHo eLib mit ihrer Dienstleistung anbieten.</p>
-
-<h3>Rechte des Nutzers</h3>
-
-<p>Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen Daten über Sie gespeichert wurden. Sie haben außerdem das Recht auf Berichtigung falscher Daten und auf die Verarbeitungseinschränkung oder Löschung Ihrer personenbezogenen Daten. Falls zutreffend, können Sie auch Ihr Recht auf Datenportabilität geltend machen. Sollten Sie annehmen, dass Ihre Daten unrechtmäßig verarbeitet wurden, können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.</p>
-
-<h3>Löschung von Daten</h3>
-
-<p>Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von Daten (z. B. Vorratsdatenspeicherung) kollidiert, haben Sie ein Anrecht auf Löschung Ihrer Daten. Von uns gespeicherte Daten werden, sollten sie für ihre Zweckbestimmung nicht mehr vonnöten sein und es keine gesetzlichen Aufbewahrungsfristen geben, gelöscht. Falls eine Löschung nicht durchgeführt werden kann, da die Daten für zulässige gesetzliche Zwecke erforderlich sind, erfolgt eine Einschränkung der Datenverarbeitung. In diesem Fall werden die Daten gesperrt und nicht für andere Zwecke verarbeitet.</p>
-
-<h3>Widerspruchsrecht</h3>
-
-<p>Nutzer dieser Plattform können von ihrem Widerspruchsrecht Gebrauch machen und der Verarbeitung ihrer personenbezogenen Daten zu jeder Zeit widersprechen.</p>
-
-<p>Wenn Sie eine Berichtigung, Sperrung, Löschung oder Auskunft über die zu Ihrer Person gespeicherten personenbezogenen Daten wünschen oder Fragen bzgl. der Erhebung, Verarbeitung oder Verwendung Ihrer personenbezogenen Daten haben oder erteilte Einwilligungen widerrufen möchten, wenden Sie sich bitte an folgende Kontaktpersonen: <a href="mailto:https://www.tiho-hannover.de/universitaet/datenschutzbeauftragter-und-datenschutz-koordinator/">https://www.tiho-hannover.de/universitaet/datenschutzbeauftragter-und-datenschutz-koordinator/</a></p>
+<MyCoReWebPage><section xml:lang="de" title="Datenschutz"><div>
+    <h2>Datenschutz</h2>
+    
+    <h3>Grundlegendes</h3>
+    
+    <p>Diese Datenschutzerklärung soll die Nutzer dieser Plattform über die Art, den Umfang und den Zweck der Erhebung
+        und Verwendung personenbezogener Daten durch die Betreiber (siehe Kontakt) informieren.</p>
+    
+    <p>Die Plattformbetreiber nehmen Ihren Datenschutz sehr ernst und behandeln Ihre personenbezogenen Daten vertraulich
+        und entsprechend der gesetzlichen Vorschriften. Da durch neue Technologien und die ständige Weiterentwicklung
+        dieses Service Änderungen an dieser Datenschutzerklärung vorgenommen werden können, empfehlen wir Ihnen sich die
+        Datenschutzerklärung in regelmäßigen Abständen wieder durchzulesen.</p>
+    
+    <h3>Cookies</h3>
+    
+    <p>Diese Dienstleistung verwendet Cookies zur pseudonymisierten Reichweitenmessung. Bei Cookies handelt es sich um
+        kleine Dateien, welche auf Ihrem Endgerät gespeichert werden. Ihr Browser greift auf diese Dateien zu. Durch den
+        Einsatz von Cookies erhöht sich die Benutzerfreundlichkeit und Sicherheit dieser Plattform. Nutzungsdaten werden
+        nur in anonymisierter Form zu Optimierungszwecken gesammelt und gespeichert. Über diese Daten können Sie nicht
+        als Besucher/in persönlich identifiziert werden und es kann kein Nutzungsprofil angelegt werden. Die Daten dienen
+        ausschließlich der Verbesserung des Publikationsservers, den die Betreiber von TiHo eLib mit ihrer Dienstleistung
+        anbieten.</p>
+    
+    <h3>Anmeldedaten</h3>
+    
+    <p>
+        Eine Anmeldung (Login) mit persönlichen Daten ist nur zur Veröffentlichung von Publikationen durch Hochschulangehörige
+        erforderlich, nicht für die Suche nach oder den lesenden Zugriff auf Publikationen. Zur Veröffentlichung melden sich
+        Hochschulangehörige mit ihrer Uni-Kennung an. Die Autorisierung erfolgt gegen Identity Provider (Shibboleth) der TiHo
+        Hannover. Das Repositorium verarbeitet und speichert dabei folgende Nutzerdaten: 
+    </p>
+    <ul>
+        <li>Name</li>
+        <li>Benutzerkennung</li>
+        <li>E-Mail-Adresse</li>
+        <li>Uhrzeit und Datum des letzten Logins</li>
+        <li>Benutzerrollen (Mitarbeiter, Studierende)</li>
+        <li>Verknüpfung zu den in diesem Repositorium veröffentlichten Publikationen, inkl. Datum und Uhrzeit der letzten Änderung</li>
+    </ul>
+    <p>Die Speicherung und Verarbeitung dieser Daten geschieht zur Wahrnehmung der uns übertragenen Aufgabe der Unterstützung von
+        Lehre und Forschung gemäß Art. 6 Abs. 1 lit. e DSGVO und ist erforderlich </p>
+    <ul>
+        <li>zum Nachweis der Berechtigung zur Veröffentlichung in unserem Repositorium</li>
+        <li>zur Kommunikation mit AutorInnen im Rahmen des Veröffentlichungsprozesses</li>
+        <li>zum Nachweis der Urheberschaft an E-Publikationen</li>
+    </ul>
+    
+    <h3>Publikationsdaten</h3>
+    
+    <p>Zweck dieses Repositoriums ist die weltweite Veröffentlichung und Bereitstellung elektronischer Publikationen
+        (Open Access E-Publikationen und E-Dissertationen). Dazu speichern, verarbeiten und veröffentlichen wir auch personenbezogene
+        Daten der an Publikationen beteiligten Personen: </p>
+    <ul>
+        <li>Namen und Rollen (z. B. Autor, Herausgeber)</li>
+        <li>Eindeutige Autoren-Identifikatoren (z. B. ORCID iD, GND)</li>
+        <li>Informationen zur organisatorischen Zugehörigkeit (z. B. Universität, Fakultät, Institut)</li>
+    </ul>
+    <p>
+        Dies dient dem eindeutigen Nachweis und der Anerkennung der Urheberschaft, 
+        der Zitierfähigkeit und der besseren Auffindbarkeit der Publikationen.  
+        Mit Veröffentlichung der Publikation übertragen wir auch diese personenbezogenen Daten an Dritte
+        und stellen sie über Schnittstellen bereit:
+    </p>
+    <ul>
+        <li>an die Deutsche Nationalbibliothek im Rahmen der Meldepflichten zum Zweck der Archivierung und des Nachweises in der Deutschen Nationalbibliotgrafie</li>
+        <li>an die Registrierungsagentur DataCite zur eindeutigen Vergabe von dauerhaften Publikations-Identifikatoren (DOI)</li>
+        <li>an wissenschaftliche und allgemeine Suchmaschinen wie Google, Google Scholar, BASE</li>
+        <li>an Dritte weltweit, über Schnittstellen wie OAI (Open Archives Initiative) und das Google Sitemap Protokoll</li>
+    </ul>
+    <p>
+        Eine Veröffentlichung und damit Weitergabe und weltweite Zugänglichmachung erfolgt nur mit 
+        Einverständnis der Autoren bzw. Herausgeber und erst nach Unterzeichnung des Veröffentlichungsvertrages.
+    </p>
+    
+    <h3>Rechte des Nutzers</h3>
+    
+    <p>Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen
+        Daten über Sie gespeichert wurden. Sie haben außerdem das Recht auf Berichtigung falscher Daten und auf die
+        Verarbeitungseinschränkung oder Löschung Ihrer personenbezogenen Daten. Falls zutreffend, können Sie auch Ihr
+        Recht auf Datenportabilität geltend machen. Sollten Sie annehmen, dass Ihre Daten unrechtmäßig verarbeitet wurden,
+        können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.</p>
+    
+    <h3>Löschung von Daten</h3>
+    
+    <p>Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von Daten (z. B. Vorratsdatenspeicherung)
+        kollidiert, haben Sie ein Anrecht auf Löschung Ihrer Daten. Von uns gespeicherte Daten werden, sollten sie für
+        ihre Zweckbestimmung nicht mehr vonnöten sein und es keine gesetzlichen Aufbewahrungsfristen geben, gelöscht.
+        Falls eine Löschung nicht durchgeführt werden kann, da die Daten für zulässige gesetzliche Zwecke erforderlich
+        sind, erfolgt eine Einschränkung der Datenverarbeitung. In diesem Fall werden die Daten gesperrt und nicht für
+        andere Zwecke verarbeitet.</p>
+    
+    <h3>Widerspruchsrecht</h3>
+    
+    <p>Nutzer dieser Plattform können von ihrem Widerspruchsrecht Gebrauch machen und der Verarbeitung ihrer
+        personenbezogenen Daten zu jeder Zeit widersprechen.</p>
+    
+    <p>Wenn Sie eine Berichtigung, Sperrung, Löschung oder Auskunft über die zu Ihrer Person gespeicherten
+        personenbezogenen Daten wünschen oder Fragen bzgl. der Erhebung, Verarbeitung oder Verwendung Ihrer
+        personenbezogenen Daten haben oder erteilte Einwilligungen widerrufen möchten, wenden Sie sich bitte an
+        folgende Kontaktpersonen:
+        <a href="mailto:https://www.tiho-hannover.de/universitaet/datenschutzbeauftragter-und-datenschutz-koordinator/"
+            >https://www.tiho-hannover.de/universitaet/datenschutzbeauftragter-und-datenschutz-koordinator/</a></p>
 </div>
-</section><meta><log lastEditor="jdickel" date="2018-12-19" time="14:55" /></meta></MyCoReWebPage>
+</section><meta><log lastEditor="administrator" date="2019-08-23" time="14:55" /></meta></MyCoReWebPage>
