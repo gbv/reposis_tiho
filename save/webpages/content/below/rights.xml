@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage><section xml:lang="de" title="Datenschutz"><div>
-    <h2>Datenschutz</h2>
+    <h1>Datenschutz</h1>
     
-    <h3>Name und Anschrift des Verantwortlichen</h3>
+    <h2>Name und Anschrift des Verantwortlichen</h2>
     <p>
         Der Verantwortliche im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze
-        der EU-Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die: <br /><br />
-        Stiftung Tierärztliche Hochschule Hannover 
+        der EU-Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist die:
+        <blockquote>
+          Stiftung Tierärztliche Hochschule Hannover
+        </blockquote>
     </p>
     
-    <h3>Name und Anschrift des Datenschutzbeauftragten</h3>
+    <h2>Name und Anschrift des Datenschutzbeauftragten</h2>
     <p>
-        Der Datenschutzbeauftragte des Verantwortlichen ist:<br /><br />
-        Apl. Prof. Dr. Bernd Schröder<br />
-        Stiftung Tierärztliche Hochschule Hannover<br />
-        Bünteweg 2<br />
-        30559 Hannover<br />
-        Deutschland<br />
-        Tel.: +49 511 953-8015<br />
-        E-Mail: <span class="madress">datenschutz [at] tiho-hannover.de</span><br />
-        Website: <a href="https://www.tiho-hannover.de/kontakt/datenschutz/">www.tiho-hannover.de</a> 
+        Der Datenschutzbeauftragte des Verantwortlichen ist:
+        <blockquote>
+          Apl. Prof. Dr. Bernd Schröder<br />
+          Stiftung Tierärztliche Hochschule Hannover<br />
+          Bünteweg 2<br />
+          30559 Hannover<br />
+          Deutschland<br />
+          Tel.: +49 511 953-8015<br />
+          E-Mail: <span class="madress">datenschutz [at] tiho-hannover.de</span><br />
+          Website: <a href="https://www.tiho-hannover.de/kontakt/datenschutz/">www.tiho-hannover.de</a>
+        </blockquote>
     </p>
     
-    <h3>Grundlegendes</h3>
+    <h2>Grundlegendes</h2>
     
     <p>Diese Datenschutzerklärung soll die Nutzer dieser Plattform über die Art, den Umfang und den Zweck der Erhebung
         und Verwendung personenbezogener Daten durch die Betreiber (siehe Kontakt) informieren.</p>
@@ -32,7 +36,7 @@
         dieses Service Änderungen an dieser Datenschutzerklärung vorgenommen werden können, empfehlen wir Ihnen sich die
         Datenschutzerklärung in regelmäßigen Abständen wieder durchzulesen.</p>
     
-    <h3>Cookies</h3>
+    <h2>Cookies</h2>
     
     <p>Diese Dienstleistung verwendet Cookies zur pseudonymisierten Reichweitenmessung. Bei Cookies handelt es sich um
         kleine Dateien, welche auf Ihrem Endgerät gespeichert werden. Ihr Browser greift auf diese Dateien zu. Durch den
@@ -42,7 +46,7 @@
         ausschließlich der Verbesserung des Publikationsservers, den die Betreiber von TiHo eLib mit ihrer Dienstleistung
         anbieten.</p>
     
-    <h3>Anmeldedaten</h3>
+    <h2>Anmeldedaten</h2>
     
     <p>
         Eine Anmeldung (Login) mit persönlichen Daten ist nur zur Veröffentlichung von Publikationen durch Hochschulangehörige
@@ -66,7 +70,7 @@
         <li>zum Nachweis der Urheberschaft an E-Publikationen</li>
     </ul>
     
-    <h3>Publikationsdaten</h3>
+    <h2>Publikationsdaten</h2>
     
     <p>Zweck dieses Repositoriums ist die weltweite Veröffentlichung und Bereitstellung elektronischer Publikationen
         (Open Access E-Publikationen und E-Dissertationen). Dazu speichern, verarbeiten und veröffentlichen wir auch personenbezogene
@@ -93,7 +97,7 @@
         Einverständnis der Autoren bzw. Herausgeber und erst nach Unterzeichnung des Veröffentlichungsvertrages.
     </p>
     
-    <h3>Rechte des Nutzers</h3>
+    <h2>Rechte des Nutzers</h2>
     
     <p>Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen
         Daten über Sie gespeichert wurden. Sie haben außerdem das Recht auf Berichtigung falscher Daten und auf die
@@ -101,7 +105,7 @@
         Recht auf Datenportabilität geltend machen. Sollten Sie annehmen, dass Ihre Daten unrechtmäßig verarbeitet wurden,
         können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.</p>
     
-    <h3>Löschung von Daten</h3>
+    <h2>Löschung von Daten</h2>
     
     <p>Sofern Ihr Wunsch nicht mit einer gesetzlichen Pflicht zur Aufbewahrung von Daten (z. B. Vorratsdatenspeicherung)
         kollidiert, haben Sie ein Anrecht auf Löschung Ihrer Daten. Von uns gespeicherte Daten werden, sollten sie für
@@ -110,7 +114,7 @@
         sind, erfolgt eine Einschränkung der Datenverarbeitung. In diesem Fall werden die Daten gesperrt und nicht für
         andere Zwecke verarbeitet.</p>
     
-    <h3>Widerspruchsrecht</h3>
+    <h2>Widerspruchsrecht</h2>
     
     <p>Nutzer dieser Plattform können von ihrem Widerspruchsrecht Gebrauch machen und der Verarbeitung ihrer
         personenbezogenen Daten zu jeder Zeit widersprechen.</p>

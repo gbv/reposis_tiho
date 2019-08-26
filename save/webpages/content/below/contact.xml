@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage><section xml:lang="de" title="Kontakt"><div>
 <div>
-<h2>Kontakt</h2>
+<h1>Kontakt</h1>
 
-<h3>Bibliothek der Stiftung Tierärztliche Hochschule Hannover</h3>
+<h2>Bibliothek der Stiftung Tierärztliche Hochschule Hannover</h2>
 
 <address>Bünteweg 2<br />
 Haus 262<br />
@@ -11,7 +11,7 @@ D-30559 Hannover<br />
 Tel.: 0511 953 7101<br />
 E-Mail: <a href="mailto:biblio@tiho-hannover.de">biblio@tiho-hannover.de</a></address>
 
-<h3>Verbundzentrale des GBV (VZG)</h3>
+<h2>Verbundzentrale des GBV (VZG)</h2>
 
 <address>Platz der Göttinger Sieben 1<br />
 37073 Göttingen<br />
@@ -20,7 +20,7 @@ Fax: 0551 39 13980</address>
 </div>
 
 <div>
-<h4>Die Technik</h4>
+<h3>Die Technik</h3>
 
 <p>Die Entwicklung und Implementierung dieses Dokumentenservers erfolgt auf Basis des Repository-Frameworks MyCoRe. Analoge Projekte wurden bereits mit den Hochschulschriftenservern DBT und DuEPublico umgesetzt. MyCoRe bildet sowohl die Grundlage für den DMS-Service der Verbundzentrale als auch für den zentralen Betrieb der digitalen Bibliothek des Freistaates Thüringen unter Federführung der Thüringischen Landes- und Universitätsbibliothek (ThULB) Jena, so dass ein langfristiger Betrieb sowie eine kontinuierliche Weiterentwicklung durch die VZG und die ThULB Jena garantiert sind. Außerdem wird somit die Anbindung des DMS an die CBS-/LBS-Struktur zur automatischen Übernahme der Metadaten und Verknüpfung der Nachweise mit dem DMS sowie die Replizierung der Institutsstruktur in die OPACs gewährleistet.</p>
 </div>
