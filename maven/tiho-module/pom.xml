@@ -23,14 +23,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.mycore.mir</groupId>
-  <version>2018.06.0.3-SNAPSHOT</version>
+  <version>2018.09.6-SNAPSHOT</version>
   <artifactId>tiho-module</artifactId>
   <name>tiho-module</name>
   <parent>
     <groupId>org.mycore</groupId>
     <artifactId>mycore-parent</artifactId>
-    <version>38-SNAPSHOT</version>
+    <version>42-SNAPSHOT</version>
   </parent>
+  <properties>
+    <mycore.version>2019.06.2-SNAPSHOT</mycore.version>
+  </properties>
   <repositories>
     <repository>
       <releases>
@@ -78,12 +81,12 @@
     <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>mycore-pi</artifactId>
-      <version>2018.06.0.3-SNAPSHOT</version>
+      <version>${mycore.version}</version>
     </dependency>
     <dependency>
       <groupId>org.mycore</groupId>
       <artifactId>mycore-mods</artifactId>
-      <version>2018.06.0.3-SNAPSHOT</version>
+      <version>${mycore.version}</version>
     </dependency>
   </dependencies>
 
