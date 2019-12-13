@@ -1,3 +1,5 @@
+/*  MIR / Boostrap layout quick fixes - ToDo: repair */
+
 #powered_by {
   text-align: center;
   background-color: #E5DED0;
@@ -33,6 +35,10 @@
   padding: .5rem 2rem; 
 }
 
+.navbar .nav-link {
+  padding: 20px 15px;
+} 
+
 .info-button {
   padding: 4px 12px;
 }
@@ -44,10 +50,10 @@ blockquote {
   border-left: 5px solid #ecf0f1;
 }
 
-.nav-link {
-  padding: 20px 15px;
-}
-
 .flatmir-footer .dropdown-item {
   width: auto;
+}
+
+.breadcrumb {
+  padding: .25rem 1rem;
 }
