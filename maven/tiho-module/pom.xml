@@ -23,7 +23,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.mycore.mir</groupId>
-  <version>2018.09.6-SNAPSHOT</version>
+  <version>2019.06-SNAPSHOT</version>
   <artifactId>tiho-module</artifactId>
   <name>tiho-module</name>
   <parent>
