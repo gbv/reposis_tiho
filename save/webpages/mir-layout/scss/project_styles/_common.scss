@@ -37,7 +37,20 @@
 
 .navbar .nav-link {
   padding: 20px 15px;
-} 
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.171875rem;
+  line-height: 1;
+  background-color: #e5ded0;
+  border: 1px solid #95a5a6;
+  border-radius: 0;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 
 .info-button {
   padding: 4px 12px;

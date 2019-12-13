@@ -27,30 +27,35 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-expand-lg mir-main-nav">
+    <div class="navbar navbar-default mir-main-nav">
       <div class="container">
-
-        <div class="navbar-header">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".mir-main-nav-entries">
+        <nav class="mir-main-nav-entries navbar-expand-md show">
+          <button
+            class="navbar-toggler float-left"
+            type="button"
+            data-toggle="collapse"
+            data-target="#tiho-main-menu"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
-
-        <nav class="collapse navbar-collapse mir-main-nav-entries">
-          <ul class="navbar-nav mr-auto">
-            <xsl:for-each select="$loaded_navigation_xml/menu">
-              <xsl:choose>
-                <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
-                <xsl:when test="@id='brand'"/>
-                <xsl:when test="@id='below'"/>
-                <xsl:when test="@id='user'"/>
-                <xsl:otherwise>
-                  <xsl:apply-templates select="."/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:for-each>
-            <xsl:call-template name="mir.basketMenu" />
-          </ul>
+          <div id="tiho-main-menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <xsl:for-each select="$loaded_navigation_xml/menu">
+                <xsl:choose>
+                  <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <xsl:when test="@id='brand'"/>
+                  <xsl:when test="@id='below'"/>
+                  <xsl:when test="@id='user'"/>
+                  <xsl:otherwise>
+                    <xsl:apply-templates select="."/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+              <xsl:call-template name="mir.basketMenu" />
+            </ul>
+          </div>
         </nav>
 
         <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline my-2" role="search">

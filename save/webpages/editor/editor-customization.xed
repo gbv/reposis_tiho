@@ -8,16 +8,14 @@
     <xed:remove  ref="comment" />
     <xed:remove  ref="author.repeated" />
     <xed:remove  ref="rights" />
-    
-    <xed:include ref="institutes.repeat"  before="*" />
-    <!-- ToDo: add Anzeige in Verzeichnis - Checkbox -->
-    <xed:include ref="rights"             after="institutes.repeat" />
-    <xed:include ref="tiho.commentIntern" after="rights" />
-    <xed:include ref="author.repeated"    after="tiho.commentIntern" />
-    <xed:include ref="link"               after="doi.handle.urn.repeated" />
-    
+    <xed:include ref="institutes.repeat"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"           after="rights" />
+    <xed:include ref="author.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="link"                         after="doi.handle.urn.repeated" />
     <xed:include ref="validate.institutes.required" after="institutes.repeat" />
-    <xed:include ref="validate.author.required" after="author.repeated" />
+    <xed:include ref="validate.author.required"     after="author.repeated" />
   </xed:modify>
 
   <xed:modify ref="hosts.journal">
@@ -26,26 +24,27 @@
   </xed:modify>
 
 
-  <!-- ToDo: add missing language in poster -->
-
   <!-- ========== validation ========== -->
   <xed:modify ref="institutes">
     <xed:include ref="validate.institutes.required" after="*" />
   </xed:modify>
+
   <xed:template id="validate.institutes.required">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
     <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution" display="global" />
   </xed:template>
+
   <xed:template id="validate.author.required">
-    <xed:validate xpath="//mods:mods/mods:name" required="true" i18n="mir.validation.author" display="global" /><!-- ToDo: fixme -->
+    <xed:validate xpath="//mods:mods/mods:name[mods:role/mods:roleTerm[@type='code'][@authority='marcrelator'][text()='aut']]/mods:displayForm" required="true" i18n="mir.validation.author" display="global" />
   </xed:template>
 
+
   <!-- ========== tiho specific templates ========== -->
-  <xed:template id="tiho.displayDirectory">
-    <xed:repeat xpath="mods:classification[@authorityURI='http://perspectivia.gbv.de/api/v1/classifications/displayDirectory'][@displayLabel='displayDirectory']" min="1" max="10" method="build">
+  <xed:template id="tiho.toBeDisplayedIn">
+    <xed:repeat xpath="mods:classification[@authorityURI='https://elib.tiho-hannover.de/api/v1/classifications/toBeDisplayedIn'][@displayLabel='toBeDisplayedIn']" min="1" max="10" method="build">
       <div class="form-group row {$xed-validation-marker}">
         <label class="col-md-3 col-form-label text-right">
-          <xed:output i18n="editor.search.tiho.displayDirectory" />
+          <xed:output i18n="editor.search.tiho.toBeDisplayedIn" />
           :
         </label>
         <div class="col-md-6">
@@ -54,11 +53,11 @@
               <option value="">
                 <xed:output i18n="mir.select" />
               </option>
-              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:displayDirectory" />
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:toBeDisplayedIn" />
             </select>
           </xed:bind>
         </div>
-        <mir:help-pmud help-text="{i18n:tiho.help.displayDirectory}" pmud="true" />
+        <mir:help-pmud help-text="{i18n:tiho.help.toBeDisplayedIn}" pmud="true" />
       </div>
     </xed:repeat>
   </xed:template>
