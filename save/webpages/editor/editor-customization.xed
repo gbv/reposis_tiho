@@ -63,7 +63,7 @@
   </xed:template>
   
   <xed:template id="tiho.commentIntern">
-    <mir:textarea xpath="mods:note[@type='intern']" help-text="{i18n:mir.help.comment}" label="mir.comment" rows="2" />
+    <mir:textarea xpath="mods:note[@type='admin']" help-text="{i18n:tiho.help.commentIntern}" label="mir.comment" rows="2" />
   </xed:template>
 
 </xed:template>
