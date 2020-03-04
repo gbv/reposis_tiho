@@ -3,6 +3,18 @@
 <xed:template xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
 
   <!-- ========== extend editor-genres.xed ========== -->
+  <xed:modify ref="admin.fields">
+    <xed:remove  ref="institutes" />
+    <xed:remove  ref="comment.complex" />
+    <xed:remove  ref="name.extended.repeated" />
+    <xed:remove  ref="rights" />
+    <xed:include ref="institutes.repeat"            after="toc-layout" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"           after="rights" />
+    <xed:include ref="name.extended.repeated"       after="tiho.commentIntern" />
+  </xed:modify>
+  
   <xed:modify ref="genres.publication.common">
     <xed:remove  ref="institutes" />
     <xed:remove  ref="comment" />
@@ -14,7 +26,9 @@
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
-    <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='lecture']">
+      <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    </xed:if>
     <xed:include ref="validate.author.required"     after="author.repeated" />
   </xed:modify>
 
