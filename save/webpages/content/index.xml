@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MyCoReWebPage><section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers TiHo eLib"><div class="container">
 <div class="row">
-<div class="col-xs-12">
+<div class="col-12">
 <p><strong><span style="color:#3366cc;">Dieser Service befindet sich noch im Aufbau! Bitte wenden Sie sich für die Einreichung von Open-Access-Veröffentlichungen und Hochschulschriften wie bisher an </span><a href="mailto:open.access@tiho-hannover.de">open.access@tiho-hannover.de</a><span style="color:#3366cc;"> bzw. an die <a href="https://www.tiho-hannover.de/kliniken-institute/bibliothek/richtlinien-und-infos-fuer-dissertationen/">Hochschulschriftenstelle</a>.</span></strong><span style="color:#3366cc;"><strong> </strong></span></p>
 
 <h2> </h2>
@@ -14,6 +14,7 @@
 
 <ul>
 	<li>Hochschulschriften der TiHo</li>
+	<li>Hochschulbibliographie ab 2020 (eingeschränkt)</li>
 </ul>
 
 <p><u>Geplante Angebote:</u></p>
@@ -22,7 +23,6 @@
 	<li>Digitale Sammlung Veterinärmedizin</li>
 	<li>Forschungsdaten</li>
 	<li>Open-Access-Veröffentlichungen</li>
-	<li>Hochschulbibliographie ab 2019</li>
 </ul>
 </div>
 </div>
