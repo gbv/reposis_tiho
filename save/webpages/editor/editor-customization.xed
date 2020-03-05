@@ -37,6 +37,88 @@
     <xed:remove ref="identifier.isbn.journal.relItemsearch" />
   </xed:modify>
 
+  <xed:modify ref="genres.thesis.common">
+    <xed:remove  ref="institutes" />
+    <xed:remove  ref="comment" />
+    <xed:remove  ref="rights" />
+    <xed:remove  ref="language" />
+    <xed:remove  ref="creator.place.college" />
+    <xed:remove  ref="creator.college" />
+    <xed:remove  ref="place" />
+    <xed:remove  ref="type.of.resource.repeated" />
+    <xed:remove  ref="embargo.datetimepicker" />
+    <xed:include ref="doi.handle.urn.repeated"              after="identifier.isbn" />
+    <!-- TODO: add validation rules and required fields -->
+  </xed:modify>
+
+  <xed:modify ref="genres.dissertation">
+    <xed:remove  ref="thesis.advisor.reviewer.all.repeated" />
+    <xed:remove  ref="date.submitted.datetimepicker" />
+    <xed:remove  ref="date.accepted.datetimepicker" />
+    <xed:remove  ref="shelfmark" />
+    <xed:include ref="institutes.repeat"                    before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"                   after="rights" />
+    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
+    <xed:include ref="creator.place.college"                after="titles.thesis" />
+    <xed:include ref="creator.college"                      after="creator.place.college" />
+    <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
+    <xed:include ref="place"                                after="year.issued" />
+  </xed:modify>
+  
+  <xed:modify ref="genres.habilitation">
+    <xed:remove  ref="thesis.advisor.reviewer.all.repeated" />
+    <xed:remove  ref="date.submitted.datetimepicker" />
+    <xed:remove  ref="date.accepted.datetimepicker" />
+    <xed:remove  ref="shelfmark" />
+    <xed:include ref="institutes.repeat"                    before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"                   after="rights" />
+    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
+    <xed:include ref="creator.place.college"                after="titles.thesis" />
+    <xed:include ref="creator.college"                      after="creator.place.college" />
+    <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
+    <xed:include ref="place"                                after="year.issued" />
+  </xed:modify>
+
+  <xed:modify ref="genres.master_thesis">
+    <xed:remove  ref="thesis.advisor.reviewer.all.repeated" />
+    <xed:remove  ref="date.submitted.datetimepicker" />
+    <xed:remove  ref="date.accepted.datetimepicker" />
+    <xed:remove  ref="shelfmark" />
+    <xed:include ref="institutes.repeat"                    before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"                   after="rights" />
+    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
+    <xed:include ref="creator.place.college"                after="titles.thesis" />
+    <xed:include ref="creator.college"                      after="creator.place.college" />
+    <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
+    <xed:include ref="place"                                after="year.issued" />
+  </xed:modify>
+
+  <xed:modify ref="genres.diploma_thesis">
+    <xed:remove  ref="thesis.advisor.reviewer.all.repeated" />
+    <xed:remove  ref="date.submitted.datetimepicker" />
+    <xed:remove  ref="date.accepted.datetimepicker" />
+    <xed:remove  ref="shelfmark" />
+    <xed:include ref="institutes.repeat"                    before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"                   after="rights" />
+    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
+    <xed:include ref="creator.place.college"                after="titles.thesis" />
+    <xed:include ref="creator.college"                      after="creator.place.college" />
+    <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
+    <xed:include ref="place"                                after="year.issued" />
+  </xed:modify>
+
 
   <!-- ========== validation ========== -->
   <xed:modify ref="institutes">

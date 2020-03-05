@@ -4,7 +4,6 @@
   <section title="Publizieren" xml:lang="de"/>
   <section title="Publication" xml:lang="en"/>
   <section xml:lang="de">
-    <script src="../../js/mir/select-doctype.min.js" /> 
 
     <form id="submit_publication"
           class="form-horizontal"
@@ -16,7 +15,7 @@
       <div class="row">
         <div class="col-10">
           <p>
-            In einem ersten Schritt gehen Sie bitte die Art der Hochschulschrift an. Geben Sie ausserdem, falls bekannt, einen Identifier an,
+            In einem ersten Schritt geben Sie bitte die Art der Hochschulschrift an. Geben Sie ausserdem, falls bekannt, einen Identifier an,
             um bereits vorhandene Daten aus anderen Quellen zu übernehmen. Ansonsten klicken Sie einfach auf "Weiter".
           </p>
         </div>
@@ -28,11 +27,10 @@
         </label>
         <div class="col-7">
           <select id="genre" class="form-control" name="genre" size="1">
-            <optgroup label="Hochschulschriften"></optgroup>
-            <option value="dissertation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dissertation</option>
-            <option value="habilitation">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Habilitation</option>
-            <option value="diploma_thesis">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diplomarbeit</option>
-            <option value="master_thesis">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masterarbeit</option>
+            <option value="dissertation">&#160;&#160;&#160;&#160;&#160;&#160;Dissertation</option>
+            <option value="habilitation">&#160;&#160;&#160;&#160;&#160;&#160;Habilitation</option>
+            <option value="diploma_thesis">&#160;&#160;&#160;&#160;&#160;&#160;Diplomarbeit</option>
+            <option value="master_thesis">&#160;&#160;&#160;&#160;&#160;&#160;Masterarbeit</option>
           </select>
         </div>
       </div>
