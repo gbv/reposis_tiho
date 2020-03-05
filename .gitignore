@@ -10,3 +10,5 @@ mycore.active.properties
 mycore.properties
 mycore.resolved.properties
 resources/META-INF/persistence.xml
+MCRWebCLI-unprocessed-commands.txt
+maven/tiho-module/target/
