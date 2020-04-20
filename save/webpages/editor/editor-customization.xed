@@ -47,8 +47,13 @@
     <xed:remove  ref="place" />
     <xed:remove  ref="type.of.resource.repeated" />
     <xed:remove  ref="embargo.datetimepicker" />
+    <xed:remove  ref="subject.simple" />
     <xed:include ref="doi.handle.urn.repeated"              after="identifier.isbn" />
-    <!-- TODO: add validation rules and required fields -->
+    <xed:include ref="tiho.subject.de.simple"               after="sdnb.repeat" />
+    <xed:include ref="tiho.subject.en.simple"               after="tiho.subject.de.simple" />
+    <xed:include ref="validate.subject.de.required"         after="*" />
+    <xed:include ref="validate.subject.en.required"         after="validate.subject.de.required" />
+    <xed:include ref="validate.abstract.de_en.required"     after="validate.subject.en.required" />
   </xed:modify>
 
   <xed:modify ref="genres.dissertation">
@@ -77,11 +82,10 @@
     <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
-    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="tiho.habil_thesis.author.repeated"    after="tiho.commentIntern" />
     <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
     <xed:include ref="creator.place.college"                after="titles.thesis" />
     <xed:include ref="creator.college"                      after="creator.place.college" />
-    <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
   </xed:modify>
 
@@ -94,7 +98,7 @@
     <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
-    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="tiho.master_thesis.advisor.reviewer.repeated"  after="tiho.commentIntern" />
     <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
     <xed:include ref="creator.place.college"                after="titles.thesis" />
     <xed:include ref="creator.college"                      after="creator.place.college" />
@@ -111,7 +115,7 @@
     <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
-    <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
+    <xed:include ref="tiho.diploma_thesis.advisor.reviewer.repeated"  after="tiho.commentIntern" />
     <xed:include ref="language"                             after="thesis.advisor.reviewer.repeated" />
     <xed:include ref="creator.place.college"                after="titles.thesis" />
     <xed:include ref="creator.college"                      after="creator.place.college" />
@@ -132,6 +136,18 @@
 
   <xed:template id="validate.author.required">
     <xed:validate xpath="//mods:mods/mods:name[mods:role/mods:roleTerm[@type='code'][@authority='marcrelator'][text()='aut']]/mods:displayForm" required="true" i18n="mir.validation.author" display="global" />
+  </xed:template>
+
+  <xed:template id="validate.subject.de.required">
+    <xed:validate xpath="//mods:mods/mods:subject[@xml:lang='de']" test="count(//mods:mods/mods:subject[@xml:lang='de']/mods:topic[string-length(text()) &gt; 0])=3" i18n="tiho.validation.subject.de" display="global" />
+  </xed:template>
+
+  <xed:template id="validate.subject.en.required">
+    <xed:validate xpath="//mods:mods/mods:subject[@xml:lang='en']" test="count(//mods:mods/mods:subject[@xml:lang='en']/mods:topic[string-length(text()) &gt; 0])=3" i18n="tiho.validation.subject.en" display="global" />
+  </xed:template>
+
+  <xed:template id="validate.abstract.de_en.required">
+    <xed:validate xpath="//mods:mods/mods:abstract" test="string-length(//mods:mods/mods:abstract[@xml:lang='de']/text()) &gt; 0 and string-length(//mods:mods/mods:abstract[@xml:lang='en']/text()) &gt; 0" i18n="tiho.validation.abstract.de_en" display="global" />
   </xed:template>
 
 
@@ -160,6 +176,67 @@
   
   <xed:template id="tiho.commentIntern">
     <mir:textarea xpath="mods:note[@type='admin']" help-text="{i18n:tiho.help.commentIntern}" label="mir.comment" rows="2" />
+  </xed:template>
+
+  <xed:template id="tiho.subject.de.simple">
+    <xed:bind xpath="mods:subject[@xml:lang='de']">
+      <mir:topic.repeated min="3" max="3" label="tiho.subject.topic.de" help-text="{i18n:mir.help.subject.topic.gnd}" />
+    </xed:bind>
+  </xed:template>
+
+  <xed:template id="tiho.subject.en.simple">
+    <xed:bind xpath="mods:subject[@xml:lang='en']">
+      <mir:topic.repeated min="3" max="3" label="tiho.subject.topic.en" help-text="{i18n:mir.help.subject.topic.gnd}" />
+    </xed:bind>
+  </xed:template>
+
+  <xed:template id="tiho.diploma_thesis.advisor.reviewer.repeated">
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='aut']" />
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='ths']" />
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='rev']" />
+    <mir:person.repeated help-text="{i18n:mir.help.thesis.advisor.reviewer}">
+      <option value="aut">
+        <xed:output i18n="tiho.role.diploma_thesis" />
+      </option>
+      <option value="ths">
+        <xed:output i18n="mir.role.advisor" />
+      </option>
+      <option value="rev">
+        <xed:output i18n="mir.role.reviewer" />
+      </option>
+    </mir:person.repeated>
+  </xed:template>
+  
+  <xed:template id="tiho.master_thesis.advisor.reviewer.repeated">
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='aut']" />
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='ths']" />
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='rev']" />
+    <mir:person.repeated help-text="{i18n:mir.help.thesis.advisor.reviewer}">
+      <option value="aut">
+        <xed:output i18n="tiho.role.master_thesis" />
+      </option>
+      <option value="ths">
+        <xed:output i18n="mir.role.advisor" />
+      </option>
+      <option value="rev">
+        <xed:output i18n="mir.role.reviewer" />
+      </option>
+    </mir:person.repeated>
+  </xed:template>
+  
+  <xed:template id="tiho.habil_thesis.author.repeated">
+    <xed:bind xpath="mods:name[@type='personal'][mods:role/mods:roleTerm[@authority='marcrelator'][@type='code']='aut']" />
+    <mir:person.repeated help-text="{i18n:mir.help.thesis.advisor.reviewer}">
+      <option value="aut">
+        <xed:output i18n="tiho.role.habil_thesis" />
+      </option>
+      <option value="ths">
+        <xed:output i18n="mir.role.advisor" />
+      </option>
+      <option value="rev">
+        <xed:output i18n="mir.role.reviewer" />
+      </option>
+    </mir:person.repeated>
   </xed:template>
 
 </xed:template>

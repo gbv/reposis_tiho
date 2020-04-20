@@ -58,7 +58,7 @@
             </select>
           </label>
           <div class="col-7">
-            <input class="form-control" type="text" name="modsId" />
+            <input class="form-control" type="text" name="modsId" placeholder="(falls vorhanden)" />
           </div>
       </div>
 
