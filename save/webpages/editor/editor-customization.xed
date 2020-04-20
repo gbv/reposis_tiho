@@ -54,6 +54,7 @@
     <xed:include ref="validate.subject.de.required"         after="*" />
     <xed:include ref="validate.subject.en.required"         after="validate.subject.de.required" />
     <xed:include ref="validate.abstract.de_en.required"     after="validate.subject.en.required" />
+    <xed:include ref="validate.institutes.required"         after="validate.abstract.de_en.required" />
   </xed:modify>
 
   <xed:modify ref="genres.dissertation">
@@ -125,13 +126,10 @@
 
 
   <!-- ========== validation ========== -->
-  <xed:modify ref="institutes">
-    <xed:include ref="validate.institutes.required" after="*" />
-  </xed:modify>
 
   <xed:template id="validate.institutes.required">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
-    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" required="true" i18n="mir.validation.institution" display="global" />
+    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" test="string-length(//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor) &gt; 0" i18n="mir.validation.institution" display="global" />
   </xed:template>
 
   <xed:template id="validate.author.required">
