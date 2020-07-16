@@ -25,14 +25,14 @@ $(document).ready(function() {
   $('#tiho-presubmit').on("click", function(e){
     e.stopPropagation();
     e.preventDefault();
-    if ($('#genre_host').val().indexOf('_') >= 0) {
+    if ($('#genre_host').val().includes('_')) {
         var arrayValues = $('#genre_host').val().split('_');
         $('#genre').val(arrayValues[0]);
         $('#host').val(arrayValues[1]);
     } else {
         $('#genre').val($('#genre_host').val());
-        $('#genre_host').val('');
     }
+    $('#genre_host').val('');
     $('#submit_publication').submit();
   });
 
