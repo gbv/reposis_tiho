@@ -22,11 +22,11 @@
       </div>
       
       <div class="row form-group">
-        <label for="genre" class="col-3 control-label">
+        <label for="genre_host" class="col-3 control-label">
           <i18n key="component.mods.genre" />
         </label>
         <div class="col-7">
-          <select id="genre" class="form-control" name="genre" size="1">
+          <select id="genre_host" class="form-control" name="genre_host" size="1">
             <option value="article_journal">Artikel / Aufsatz in Zeitschrift</option>
             <option value="journal">Zeitschrift</option>
             <option value="article_collection">Artikel / Aufsatz in Sammelwerk</option>
@@ -69,7 +69,8 @@
         </div>
       </div>
       
-      <input id="host" type="hidden" name="host" value="standalone" />
+      <input id="genre" type="hidden" name="genre" value="article" />
+      <input id="host" type="hidden"  name="host"  value="standalone" />
       
       <div class="row form-group">
         <div class="col-10">
