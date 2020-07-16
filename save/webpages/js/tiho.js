@@ -21,4 +21,16 @@ $(document).ready(function() {
       $(this).remove();
   });
 
+  // split genre value on '_' and put last part in host parameter
+  $('#tiho-presubmit').on("click", function(e){
+    if ($('#genre').val().contains('_')) {
+        e.stopPropagation();
+        e.preventDefault();
+        var arrayValues = $('#genre').val().split('_');
+        $('#genre').val() = arrayValues[0];
+        $('#host').val()  = arrayValues[1];
+        $('#submit_publication').submit();
+    };
+  });
+
 });

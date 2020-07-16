@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="Publizieren" xml:lang="de"/>
+  <section title="Publication" xml:lang="en"/>
+  <section xml:lang="de">
+    
+    <form id="submit_publication"
+      class="form-horizontal"
+      role="form"
+      method="get"
+      action="../../editor/editor-dynamic.xed">
+      
+      <h2>Dokument publizieren</h2>
+      <div class="row">
+        <div class="col-10">
+          <p>
+            In einem ersten Schritt geben Sie bitte die Art der Publikation an. Geben Sie ausserdem, falls bekannt, einen Identifier an,
+            um bereits vorhandene Daten aus anderen Quellen zu übernehmen. Ansonsten klicken Sie einfach auf "Weiter".
+          </p>
+        </div>
+      </div>
+      
+      <div class="row form-group">
+        <label for="genre" class="col-3 control-label">
+          <i18n key="component.mods.genre" />
+        </label>
+        <div class="col-7">
+          <select id="genre" class="form-control" name="genre" size="1">
+            <option value="article_journal">Artikel / Aufsatz in Zeitschrift</option>
+            <option value="journal">Zeitschrift</option>
+            <option value="article_collection">Artikel / Aufsatz in Sammelwerk</option>
+            <option value="collection">Sammelwerk</option>
+            <option value="collection_series">Sammelwerk in Serie</option>
+            <option value="article_proceedings">Artikel / Aufsatz in Tagungsband</option>
+            <option value="proceedings">Tagungsband</option>
+            <option value="proceedings_series">Tagungsband in Serie</option>
+            <option value="book">Buch</option>
+            <option value="book_series">Buch in Serie</option>
+            <option value="article_series">Buchkapitel in Buch</option>
+            <option value="series">Serie</option>
+            <option value="dissertation">Dissertation</option>
+            <option value="habilitation">Habilitation</option>
+            <option value="diploma_thesis">Diplomarbeit</option>
+            <option value="master_thesis">Masterarbeit</option>
+            <option value="poster">Poster</option>
+            <option value="poster_proceedings">Poster / Abstract in Tagungsband</option>
+            <option value="article_festschrift">Artikel / Beitrag in Festschrift</option>
+            <option value="festschrift">Festschrift</option>
+            <option value="festschrift_series">Festschrift in Serie</option>
+            <option value="video">Film / Video</option>
+            <option value="patent">Patent</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- more options -->
+      <div class="row form-group">
+        <label class="col-3 control-label">
+          <select class="form-control form-control-inline" name="type">
+            <option value="doi">DOI</option>
+            <option value="scopus">Scopus-ID</option>
+            <option value="pubmed">PubMed-ID</option>
+            <option value="ppn">GVK-PPN</option>
+          </select>
+        </label>
+        <div class="col-7">
+          <input class="form-control" type="text" name="modsId" placeholder="(falls vorhanden)" />
+        </div>
+      </div>
+      
+      <input id="host" type="hidden" name="host" value="standalone" />
+      
+      <div class="row form-group">
+        <div class="col-10">
+          <button id="tiho-presubmit" type="submit" class="btn btn-secondary">Weiter</button>
+        </div>
+      </div>
+      
+    </form>
+  </section>
+  
+</MyCoReWebPage>
