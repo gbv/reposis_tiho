@@ -27,27 +27,27 @@
         </label>
         <div class="col-7">
           <select id="genre_host" class="form-control" name="genre_host" size="1">
-            <option value="article_journal">Artikel / Aufsatz in Zeitschrift</option>
+            <option value="article-journal">Artikel / Aufsatz in Zeitschrift</option>
             <option value="journal">Zeitschrift</option>
-            <option value="article_collection">Artikel / Aufsatz in Sammelwerk</option>
+            <option value="article-collection">Artikel / Aufsatz in Sammelwerk</option>
             <option value="collection">Sammelwerk</option>
-            <option value="collection_series">Sammelwerk in Serie</option>
-            <option value="article_proceedings">Artikel / Aufsatz in Tagungsband</option>
+            <option value="collection-series">Sammelwerk in Serie</option>
+            <option value="article-proceedings">Artikel / Aufsatz in Tagungsband</option>
             <option value="proceedings">Tagungsband</option>
-            <option value="proceedings_series">Tagungsband in Serie</option>
+            <option value="proceedings-series">Tagungsband in Serie</option>
             <option value="book">Buch</option>
-            <option value="book_series">Buch in Serie</option>
-            <option value="article_series">Buchkapitel in Buch</option>
+            <option value="book-series">Buch in Serie</option>
+            <option value="article-book">Buchkapitel in Buch</option>
             <option value="series">Serie</option>
             <option value="dissertation">Dissertation</option>
             <option value="habilitation">Habilitation</option>
             <option value="diploma_thesis">Diplomarbeit</option>
             <option value="master_thesis">Masterarbeit</option>
             <option value="poster">Poster</option>
-            <option value="poster_proceedings">Poster / Abstract in Tagungsband</option>
-            <option value="article_festschrift">Artikel / Beitrag in Festschrift</option>
+            <option value="poster-proceedings">Poster / Abstract in Tagungsband</option>
+            <option value="article-festschrift">Artikel / Beitrag in Festschrift</option>
             <option value="festschrift">Festschrift</option>
-            <option value="festschrift_series">Festschrift in Serie</option>
+            <option value="festschrift-series">Festschrift in Serie</option>
             <option value="video">Film / Video</option>
             <option value="patent">Patent</option>
           </select>

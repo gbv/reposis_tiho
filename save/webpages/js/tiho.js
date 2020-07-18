@@ -21,12 +21,12 @@ $(document).ready(function() {
       $(this).remove();
   });
 
-  // split genre value on '_' and put last part in host parameter
+  // split genre value on '-' and put last part in host parameter
   $('#tiho-presubmit').on("click", function(e){
     e.stopPropagation();
     e.preventDefault();
-    if ($('#genre_host').val().includes('_')) {
-        var arrayValues = $('#genre_host').val().split('_');
+    if ($('#genre_host').val().includes('-')) {
+        var arrayValues = $('#genre_host').val().split('-');
         $('#genre').val(arrayValues[0]);
         $('#host').val(arrayValues[1]);
     } else {

@@ -8,8 +8,8 @@
     <xed:remove  ref="comment.complex" />
     <xed:remove  ref="name.extended.repeated" />
     <xed:remove  ref="rights" />
-    <xed:include ref="institutes.repeat"            after="toc-layout" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            after="toc-layout" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="name.extended.repeated"       after="tiho.commentIntern" />
@@ -20,14 +20,14 @@
     <xed:remove  ref="comment" />
     <xed:remove  ref="author.repeated" />
     <xed:remove  ref="rights" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
     <xed:if test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='lecture']">
-      <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+      <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
     </xed:if>
     <xed:include ref="validate.author.required"     after="author.repeated" />
   </xed:modify>
@@ -38,8 +38,8 @@
 
   <xed:modify ref="genres.book">
     <xed:remove  ref="author.repeated" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
@@ -47,8 +47,8 @@
 
   <xed:modify ref="genres.collection">
     <xed:remove  ref="editor.repeated" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="editor.repeated"              after="tiho.commentIntern" />
@@ -56,20 +56,27 @@
 
   <xed:modify ref="genres.proceedings">
     <xed:remove  ref="editor.repeated" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:remove  ref="conference" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="editor.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="tiho.conference.required"     after="title.original" />
+  </xed:modify>
+  
+  <xed:modify ref="hosts.proceedings">
+    <xed:include ref="tiho.title.proceedings.relItemsearch"         after="title.proceedings.relItemsearch" />
+    <xed:remove  ref="title.proceedings.relItemsearch" />
   </xed:modify>
 
   <xed:modify ref="genres.festschrift">
     <xed:remove  ref="editor.honoree.repeated" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
-    <xed:include ref="editor.honoree.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="editor.honoree.repeated"      after="tiho.commentIntern" />
   </xed:modify>
 
   <xed:modify ref="genres.book.common">
@@ -89,16 +96,16 @@
   </xed:modify>
 
   <xed:modify ref="genres.journal">
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat"       before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat" />
     <xed:include ref="tiho.commentIntern"           after="tiho.toBeDisplayedIn" />
     <xed:include ref="subtitle"                     after="title.journal" />
     <xed:include ref="tiho.title.abbreviated.repeated"  after="subtitle" />
   </xed:modify>
 
   <xed:modify ref="genres.series">
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat"       before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat" />
     <xed:include ref="tiho.commentIntern"           after="tiho.toBeDisplayedIn" />
     <xed:include ref="subtitle"                     after="title" />
     <xed:include ref="tiho.title.abbreviated.repeated"  after="subtitle" />
@@ -109,11 +116,12 @@
     <xed:remove  ref="identifier.issn" />
     <xed:remove  ref="language" />
     <xed:remove  ref="identifier.zdbid" />
+    <xed:remove  ref="date.onlyrange.issued.datetimepicker" />
     <xed:remove  ref="sdnb.repeat" />
     <xed:remove  ref="shelfmark" />
     <xed:remove  ref="comment" />
     <xed:include ref="identifier.issn"              after="editor.repeated" />
-    <xed:include ref="language"                     after="date.onlyrange.issued.datetimepicker" />
+    <xed:include ref="language"                     after="publisher" />
     <xed:include ref="identifier.managed"           after="language" />
     <xed:include ref="doi.handle.urn.repeated"      after="identifier.managed" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
@@ -145,8 +153,8 @@
     <xed:remove  ref="date.submitted.datetimepicker" />
     <xed:remove  ref="date.accepted.datetimepicker" />
     <xed:remove  ref="shelfmark" />
-    <xed:include ref="institutes.repeat"                    before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"      before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
     <xed:include ref="thesis.advisor.reviewer.repeated"     after="tiho.commentIntern" />
@@ -162,8 +170,8 @@
     <xed:remove  ref="date.submitted.datetimepicker" />
     <xed:remove  ref="date.accepted.datetimepicker" />
     <xed:remove  ref="shelfmark" />
-    <xed:include ref="institutes.repeat"                    before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"      before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
     <xed:include ref="tiho.habil_thesis.author.repeated"    after="tiho.commentIntern" />
@@ -178,8 +186,8 @@
     <xed:remove  ref="date.submitted.datetimepicker" />
     <xed:remove  ref="date.accepted.datetimepicker" />
     <xed:remove  ref="shelfmark" />
-    <xed:include ref="institutes.repeat"                    before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"      before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
     <xed:include ref="tiho.master_thesis.advisor.reviewer.repeated"  after="tiho.commentIntern" />
@@ -195,8 +203,8 @@
     <xed:remove  ref="date.submitted.datetimepicker" />
     <xed:remove  ref="date.accepted.datetimepicker" />
     <xed:remove  ref="shelfmark" />
-    <xed:include ref="institutes.repeat"                    before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"                 after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"      before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
     <xed:include ref="tiho.diploma_thesis.advisor.reviewer.repeated"  after="tiho.commentIntern" />
@@ -213,8 +221,8 @@
     <xed:remove  ref="author.repeated" />
     <xed:remove  ref="rights" />
     <xed:remove  ref="language" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
@@ -222,11 +230,12 @@
     <xed:include ref="identifier.managed"           after="language" />
     <xed:include ref="doi.handle.urn.repeated"      after="identifier.managed" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
-    <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.video">
-    <xed:include ref="institutes.repeat"            before="*" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.av.common">
@@ -240,7 +249,6 @@
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
     <xed:include ref="link"                         after="language" />
-    <xed:include ref="validate.institutes.required" after="institutes.repeat" />
   </xed:modify>
 
   <xed:modify ref="genres.patent">
@@ -249,14 +257,14 @@
     <xed:remove  ref="rights" />
     <xed:remove  ref="inventor.repeated" />
     <xed:remove  ref="language" />
-    <xed:include ref="institutes.repeat"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="institutes.repeat" />
+    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="inventor.repeated"            after="tiho.commentIntern" />
     <xed:include ref="language"                     after="date.issued.datetimepicker" />
     <xed:include ref="link"                         after="language" />
-    <xed:include ref="validate.institutes.required" after="institutes.repeat" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
 
@@ -374,6 +382,26 @@
 
   <xed:template id="tiho.title.abbreviated.repeated">
     <mir:textfield xpath="mods:titleInfo[@type='abbreviated']/mods:title" repeat="true" label="mir.title.type.abbreviated" help-text="{i18n:mir.help.title.abbreviated}" />
+  </xed:template>
+
+  <xed:template id="tiho.conference.required">
+    <mir:textfield xpath="mods:name[@type='conference']/mods:namePart" label="mir.conference" help-text="{i18n:mir.help.conference}" placeholder="{i18n:mir.placeholder.conference}" class="required" required="true" required-i18n="tiho.validation.conference" />
+  </xed:template>
+  
+  <xed:template id="tiho.title.proceedings.relItemsearch">
+    <mir:relItemsearch searchengine="title" genre="proceedings" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title" class="required" required="true" />
+  </xed:template>
+
+  <xed:template id="tiho.editor.repeated.required">
+    <mir:role.repeated role="edt" label="mir.role.editor" help-text="{i18n:mir.help.role.editor}" class="required" required="true" required-i18n="tiho.validation.editor" />
+  </xed:template>
+  
+  <xed:template id="tiho.institutes.repeat.required">
+    <mir:insitut.repeated min="1" max="10" label="mir.institution" help-text="{i18n:mir.help.institutes}"  class="required" />
+  </xed:template>
+  
+  <xed:template id="tiho.institutes.repeat">
+    <mir:insitut.repeated min="1" max="10" label="mir.institution" help-text="{i18n:mir.help.institutes}" />
   </xed:template>
 
 </xed:template>
