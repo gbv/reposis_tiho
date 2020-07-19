@@ -61,7 +61,7 @@
     <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
-    <xed:include ref="editor.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="tiho.editor.repeated.required"              after="tiho.commentIntern" />
     <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
@@ -105,9 +105,16 @@
     <xed:remove  ref="year.issued" />
   </xed:modify>
 
+  <xed:modify ref="hosts.collection.common.publisher">
+    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:remove  ref="year.issued" />
+  </xed:modify>
+
   <xed:modify ref="hosts.journal">
     <xed:remove ref="shelfmark.journal.relItemsearch" />
     <xed:remove ref="identifier.isbn.journal.relItemsearch" />
+    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="genres.journal">
@@ -433,6 +440,10 @@
   <xed:template id="tiho.year.issued.required">
     <mir:textfield xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" label="mir.date.issued.4" help-text="{i18n:mir.help.date.issued.4}"
       placeholder="{i18n:mir.placeholder.year}" class="required" required="true" required-i18n="tiho.validation.yearIssued" />
+  </xed:template>
+
+  <xed:template id="tiho.editor.repeated.required">
+    <mir:role.repeated role="edt" label="mir.role.editor" help-text="{i18n:mir.help.role.editor}" class="required" required="true" required-i18n="tiho.validation.editor" />
   </xed:template>
 
 </xed:template>
