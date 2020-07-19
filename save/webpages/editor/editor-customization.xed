@@ -8,12 +8,11 @@
     <xed:remove  ref="comment.complex" />
     <xed:remove  ref="name.extended.repeated" />
     <xed:remove  ref="rights" />
-    <xed:include ref="tiho.institutes.repeat.required"            after="toc-layout" />
+    <xed:include ref="tiho.institutes.repeat"       after="toc-layout" />
     <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="name.extended.repeated"       after="tiho.commentIntern" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
   
   <xed:modify ref="genres.publication.common">
@@ -38,6 +37,8 @@
       <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
     </xed:if>
     <xed:include ref="validate.author.required"     after="author.repeated" />
+    <xed:include ref="tiho.year.issued.required"    after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="hosts.book">
@@ -100,6 +101,8 @@
     <xed:remove  ref="comment" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
     <xed:include ref="sdnb.repeat"                  after="link" />
+    <xed:include ref="tiho.year.issued.required"    after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="hosts.journal">
@@ -175,6 +178,8 @@
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
+    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
   
   <xed:modify ref="genres.habilitation">
@@ -209,7 +214,9 @@
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
+    <xed:include ref="validate.institutes.required"         after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="genres.diploma_thesis">
@@ -227,7 +234,9 @@
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
+    <xed:include ref="validate.institutes.required"         after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="genres.poster">
@@ -246,6 +255,8 @@
     <xed:include ref="doi.handle.urn.repeated"      after="identifier.managed" />
     <xed:include ref="link"                         after="doi.handle.urn.repeated" />
     <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.year.issued.required"    after="year.issued" />
+    <xed:remove  ref="year.issued" />
   </xed:modify>
 
   <xed:modify ref="genres.video">
@@ -287,7 +298,7 @@
 
   <xed:template id="validate.institutes.required">
     <xed:load-resource name="mir_institutes" uri="classification:metadata:-1:children:mir_institutes" />
-    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor" test="string-length(//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor) &gt; 0" i18n="mir.validation.institution" display="global" />
+    <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]" test="string-length(//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor) &gt; 0" i18n="mir.validation.institution" display="global" />
   </xed:template>
 
   <xed:template id="validate.author.required">
@@ -412,11 +423,16 @@
   </xed:template>
   
   <xed:template id="tiho.institutes.repeat.required">
-    <mir:insitut.repeated min="1" max="10" label="mir.institution" help-text="{i18n:mir.help.institutes}"  class="required" />
+    <mir:insitut.repeated min="1" max="10" label="mir.institution" help-text="{i18n:mir.help.institutes}" class="required" />
   </xed:template>
   
   <xed:template id="tiho.institutes.repeat">
     <mir:insitut.repeated min="1" max="10" label="mir.institution" help-text="{i18n:mir.help.institutes}" />
+  </xed:template>
+
+  <xed:template id="tiho.year.issued.required">
+    <mir:textfield xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" label="mir.date.issued.4" help-text="{i18n:mir.help.date.issued.4}"
+      placeholder="{i18n:mir.placeholder.year}" class="required" required="true" required-i18n="tiho.validation.yearIssued" />
   </xed:template>
 
 </xed:template>
