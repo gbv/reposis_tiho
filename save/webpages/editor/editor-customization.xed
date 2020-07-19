@@ -13,6 +13,7 @@
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="name.extended.repeated"       after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
   
   <xed:modify ref="genres.publication.common">
@@ -20,7 +21,14 @@
     <xed:remove  ref="comment" />
     <xed:remove  ref="author.repeated" />
     <xed:remove  ref="rights" />
-    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
+    <xed:choose>
+      <xed:when test="//mods:mods/mods:genre[@valueURIxEditor!='journal'][@valueURIxEditor!='newspaper'][@valueURIxEditor!='series'][@valueURIxEditor!='lecture']">
+        <xed:include ref="tiho.institutes.repeat.required" before="*" />
+      </xed:when>
+      <xed:otherwise>
+        <xed:include ref="tiho.institutes.repeat" before="*" />
+      </xed:otherwise>
+    </xed:choose>
     <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
@@ -43,6 +51,7 @@
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="author.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.collection">
@@ -52,6 +61,7 @@
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="editor.repeated"              after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.proceedings">
@@ -63,6 +73,7 @@
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="editor.repeated"              after="tiho.commentIntern" />
     <xed:include ref="tiho.conference.required"     after="title.original" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
   
   <xed:modify ref="hosts.proceedings">
@@ -77,6 +88,7 @@
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="editor.honoree.repeated"      after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.book.common">
@@ -179,6 +191,7 @@
     <xed:include ref="creator.place.college"                after="titles.thesis" />
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="place"                                after="year.issued" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.master_thesis">
@@ -196,6 +209,7 @@
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.diploma_thesis">
@@ -213,6 +227,7 @@
     <xed:include ref="creator.college"                      after="creator.place.college" />
     <xed:include ref="date.accepted.datetimepicker"         after="creator.college" /> <!-- TODO: Label anpassen: "Tag der mündlichen Prüfung" statt "Annahme der Promotion" -->
     <xed:include ref="place"                                after="year.issued" />
+    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.poster">
