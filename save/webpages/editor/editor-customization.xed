@@ -80,6 +80,8 @@
   <xed:modify ref="hosts.proceedings">
     <xed:include ref="tiho.title.proceedings.relItemsearch"         after="title.proceedings.relItemsearch" />
     <xed:remove  ref="title.proceedings.relItemsearch" />
+    <xed:include ref="tiho.conference.required"     after="conference" />
+    <xed:remove  ref="conference" />
   </xed:modify>
 
   <xed:modify ref="genres.festschrift">
@@ -422,7 +424,8 @@
   </xed:template>
   
   <xed:template id="tiho.title.proceedings.relItemsearch">
-    <mir:relItemsearch searchengine="title" genre="proceedings" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title" class="required" required="true" />
+    <mir:relItemsearch searchengine="title" genre="proceedings" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
+    class="required" required="true" required-i18n="tiho.validation.title.proceedings" />
   </xed:template>
 
   <xed:template id="tiho.editor.repeated.required">

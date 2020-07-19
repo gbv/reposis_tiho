@@ -1,7 +1,12 @@
 
 $(document).ready(function() {
 
-  if ($("input[name='genre']").val()  == 'dissertation'||'habilitation'||'diploma_thesis'||'master_thesis') {
+  if ( 
+    $("input[name='genre']").val() == 'dissertation'   ||
+    $("input[name='genre']").val() == 'habilitation'   ||
+    $("input[name='genre']").val() == 'diploma_thesis' ||
+    $("input[name='genre']").val() == 'master_thesis'
+  ) {
     if ($("input[name='/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo/mods:place/mods:placeTerm']").val()  == '') {
       $("input[name='/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:originInfo/mods:place/mods:placeTerm']").val('Hannover');
     };
