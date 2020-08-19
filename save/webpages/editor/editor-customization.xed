@@ -30,7 +30,6 @@
     <xed:include ref="validate.author.required"     after="author.repeated" />
     <xed:include ref="tiho.year.issued.required"    after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="hosts.book">
@@ -97,21 +96,20 @@
     <xed:include ref="sdnb.repeat"                  after="link" />
     <xed:include ref="tiho.year.issued.required"    after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="hosts.collection.common.publisher">
     <xed:include ref="tiho.year.issued.required"            after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.relatedItem.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="hosts.journal">
     <xed:remove ref="shelfmark.journal.relItemsearch" />
     <xed:remove ref="identifier.isbn.journal.relItemsearch" />
-    <xed:include ref="tiho.year.issued.required"            after="year.issued.relItem" />
+    <xed:include ref="tiho.year.issued.relItem.required"        after="year.issued.relItem" />
     <xed:remove  ref="year.issued.relItem" />
-    <xed:include ref="validate.relatedItem.dateIssued.required" after="tiho.year.issued.required" />
+    <xed:include ref="validate.relatedItem.title.required"      after="title.journal.relItemsearch" />
+    
   </xed:modify>
 
   <xed:modify ref="genres.journal">
@@ -184,7 +182,6 @@
     <xed:include ref="place"                                after="year.issued" />
     <xed:include ref="tiho.year.issued.required"            after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
   
   <xed:modify ref="genres.habilitation">
@@ -222,7 +219,6 @@
     <xed:include ref="validate.institutes.required"         after="tiho.institutes.repeat.required" />
     <xed:include ref="tiho.year.issued.required"            after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="genres.diploma_thesis">
@@ -243,7 +239,6 @@
     <xed:include ref="validate.institutes.required"         after="tiho.institutes.repeat.required" />
     <xed:include ref="tiho.year.issued.required"            after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="genres.poster">
@@ -264,7 +259,6 @@
     <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
     <xed:include ref="tiho.year.issued.required"    after="year.issued" />
     <xed:remove  ref="year.issued" />
-    <xed:include ref="validate.dateIssued.required" after="tiho.year.issued.required" />
   </xed:modify>
 
   <xed:modify ref="genres.video">
@@ -325,12 +319,10 @@
     <xed:validate xpath="//mods:mods/mods:abstract" test="string-length(//mods:mods/mods:abstract[@xml:lang='de']/text()) &gt; 0 and string-length(//mods:mods/mods:abstract[@xml:lang='en']/text()) &gt; 0" i18n="tiho.validation.abstract.de_en" display="global" />
   </xed:template>
 
-  <xed:template id="validate.dateIssued.required">
-    <xed:validate xpath="//mods:mods/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" required="true" i18n="tiho.validation.yearIssued" display="global" />
-  </xed:template>
-
-  <xed:template id="validate.relatedItem.dateIssued.required">
-    <xed:validate xpath="//mods:mods/mods:relatedItem[@xlink:href='tiho_mods_00000000']/mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" required="true" i18n="tiho.validation.yearIssued" display="global" />
+  <xed:template id="validate.relatedItem.title.required">
+    <xed:validate xpath="//mods:mods/mods:relatedItem/mods:titleInfo/mods:title"
+      test="//mods:mods/mods:relatedItem/@xlink:href!='tiho_mods_00000000' or string-length(//mods:mods/mods:relatedItem/mods:titleInfo/mods:title) &gt; 0"
+      i18n="mir.validation.title" display="global" />
   </xed:template>
 
   <!-- ========== tiho specific templates ========== -->
@@ -447,7 +439,12 @@
 
   <xed:template id="tiho.year.issued.required">
     <mir:textfield xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" label="mir.date.issued.4" help-text="{i18n:mir.help.date.issued.4}"
-      placeholder="{i18n:mir.placeholder.year}" class="required" />
+      placeholder="{i18n:mir.placeholder.year}" class="required" required="true" required-i18n="tiho.validation.yearIssued" />
+  </xed:template>
+  
+  <xed:template id="tiho.year.issued.relItem.required">
+    <mir:textfield xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" label="mir.date.issued.4" help-text="{i18n:mir.help.date.issued.4}"
+      placeholder="{i18n:mir.placeholder.year}" class="mir-modspart required" required="true" required-i18n="tiho.validation.yearIssued" />
   </xed:template>
 
   <xed:template id="tiho.editor.repeated.required">
