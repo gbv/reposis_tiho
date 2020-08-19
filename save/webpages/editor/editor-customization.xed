@@ -9,12 +9,12 @@
     <xed:remove  ref="name.extended.repeated" />
     <xed:remove  ref="rights" />
     <xed:include ref="tiho.institutes.repeat"       after="toc-layout" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat" />
     <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
     <xed:include ref="tiho.commentIntern"           after="rights" />
     <xed:include ref="name.extended.repeated"       after="tiho.commentIntern" />
   </xed:modify>
-  
+
   <xed:modify ref="genres.publication.common">
     <xed:remove  ref="institutes" />
     <xed:remove  ref="comment" />
