@@ -27,24 +27,27 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar navbar-default mir-main-nav">
+    <div class="mir-main-nav bg-primary">
       <div class="container">
-        <nav class="mir-main-nav-entries navbar-expand-md show">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
           <button
-            class="navbar-toggler float-left"
+            class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#tiho-main-menu"
-            aria-controls="navbarSupportedContent"
+            data-target="#mir-main-nav-collapse-box"
+            aria-controls="mir-main-nav-collapse-box"
             aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div id="tiho-main-menu" class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+
+          <div id="mir-main-nav-collapse-box" class="collapse navbar-collapse mir-main-nav__entries">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <xsl:for-each select="$loaded_navigation_xml/menu">
                 <xsl:choose>
-                  <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                  <xsl:when test="@id='main'"/>
                   <xsl:when test="@id='brand'"/>
                   <xsl:when test="@id='below'"/>
                   <xsl:when test="@id='user'"/>
@@ -55,25 +58,35 @@
               </xsl:for-each>
               <xsl:call-template name="mir.basketMenu" />
             </ul>
+
+            <form
+              action="{$WebApplicationBaseURL}servlets/solr/find"
+              class="searchfield_box form-inline my-2 my-lg-0"
+              role="search">
+              <input
+                name="condQuery"
+                placeholder="{i18n:translate('mir.navsearch.placeholder')}"
+                class="form-control mr-sm-2 search-query"
+                id="searchInput"
+                type="text"
+                aria-label="Search" />
+              <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                  <input name="owner" type="hidden" value="createdby:*" />
+                </xsl:when>
+                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                </xsl:when>
+              </xsl:choose>
+                <button type="submit" class="btn btn-primary my-2 my-sm-0">
+                  <i class="fas fa-search"></i>
+                </button>
+            </form>
+
           </div>
+
         </nav>
-
-        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="searchfield_box form-inline my-2" role="search">
-          <div class="form-group">
-            <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" class="form-control search-query" id="searchInput" type="text" />
-            <xsl:choose>
-              <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
-                <input name="owner" type="hidden" value="createdby:*" />
-              </xsl:when>
-              <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-              </xsl:when>
-            </xsl:choose>
-          </div>
-          <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
-        </form>
-
-      </div><!-- /container -->
+      </div>
     </div>
   </xsl:template>
 
