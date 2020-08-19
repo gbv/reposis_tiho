@@ -330,7 +330,7 @@
           <xed:bind xpath="@valueURIxEditor">
             <select class="form-control form-control-inline">
               <option value="">
-                <xed:output i18n="mir.select" />
+                <xed:output i18n="mir.select.optional" />
               </option>
               <xed:include uri="xslStyle:items2options:classification:editor:-1:children:toBeDisplayedIn" />
             </select>
@@ -415,8 +415,11 @@
   </xed:template>
   
   <xed:template id="tiho.title.proceedings.relItemsearch">
-    <mir:relItemsearch searchengine="title" genre="proceedings" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title"
-    class="required" required="true" required-i18n="tiho.validation.title.proceedings" />
+    <mir:relItemsearch searchengine="title" genre="proceedings" responsefield="mods.title" xpath="mods:titleInfo/mods:title" label="mir.title" class="required" />
+    <!-- validate only if no relation is set -->
+    <xed:if test="../@xlink:href='tiho_mods_00000000'">
+      <xed:validate xpath="mods:titleInfo/mods:title"  i18n="tiho.validation.title.proceedings" display="global" />
+    </xed:if>
   </xed:template>
 
   <xed:template id="tiho.editor.repeated.required">
@@ -433,7 +436,11 @@
 
   <xed:template id="tiho.year.issued.required">
     <mir:textfield xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']" label="mir.date.issued.4" help-text="{i18n:mir.help.date.issued.4}"
-      placeholder="{i18n:mir.placeholder.year}" class="required" required="true" required-i18n="tiho.validation.yearIssued" />
+      placeholder="{i18n:mir.placeholder.year}" class="required" />
+    <!-- validate only if no relation is set -->
+    <xed:if test="../@xlink:href='tiho_mods_00000000'">
+      <xed:validate xpath="mods:originInfo[@eventType='publication']/mods:dateIssued[@encoding='w3cdtf']"  i18n="tiho.validation.yearIssued" display="global" />
+    </xed:if>
   </xed:template>
 
   <xed:template id="tiho.editor.repeated.required">
