@@ -43,7 +43,7 @@
             <xed:bind xpath="mods:relatedItem/mods:genre[@type='intern'][@authorityURI='http://www.mycore.org/classifications/mir_genres']/@valueURIxEditor" initially="{$host}" name="genre_host" />
           </xed:when>
           <xed:otherwise>
-            <xed:bind xpath="'standalone'" name="genre_host" />
+            <xed:param name="genre_host" default="standalone" />
           </xed:otherwise>
         </xed:choose>
 
