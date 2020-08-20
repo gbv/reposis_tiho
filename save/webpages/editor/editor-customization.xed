@@ -22,13 +22,12 @@
     <xed:remove  ref="rights" />
     <xed:include ref="tiho.institutes.repeat.required" before="*" />
     <xed:include ref="tiho.toBeDisplayedIn"            after="tiho.institutes.repeat.required" />
-    <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
-    <xed:include ref="tiho.commentIntern"           after="rights" />
-    <xed:include ref="author.repeated"              after="tiho.commentIntern" />
-    <xed:include ref="link"                         after="doi.handle.urn.repeated" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
-    <xed:include ref="validate.author.required"     after="author.repeated" />
-    <xed:include ref="tiho.year.issued.required"    after="year.issued" />
+    <xed:include ref="rights"                          after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"              after="rights" />
+    <xed:include ref="tiho.author.repeated.required"   after="tiho.commentIntern" />
+    <xed:include ref="link"                            after="doi.handle.urn.repeated" />
+    <xed:include ref="validate.institutes.required"    after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.year.issued.required"       after="year.issued" />
     <xed:remove  ref="year.issued" />
   </xed:modify>
 
@@ -38,22 +37,22 @@
 
   <xed:modify ref="genres.book">
     <xed:remove  ref="author.repeated" />
-    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
-    <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
-    <xed:include ref="tiho.commentIntern"           after="rights" />
-    <xed:include ref="author.repeated"              after="tiho.commentIntern" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.institutes.repeat.required" before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"            after="tiho.institutes.repeat.required" />
+    <xed:include ref="rights"                          after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"              after="rights" />
+    <xed:include ref="author.repeated"                 after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required"    after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.collection">
     <xed:remove  ref="editor.repeated" />
-    <xed:include ref="tiho.institutes.repeat.required"            before="*" />
-    <xed:include ref="tiho.toBeDisplayedIn"         after="tiho.institutes.repeat.required" />
-    <xed:include ref="rights"                       after="tiho.toBeDisplayedIn" />
-    <xed:include ref="tiho.commentIntern"           after="rights" />
-    <xed:include ref="tiho.editor.repeated.required"              after="tiho.commentIntern" />
-    <xed:include ref="validate.institutes.required" after="tiho.institutes.repeat.required" />
+    <xed:include ref="tiho.institutes.repeat.required" before="*" />
+    <xed:include ref="tiho.toBeDisplayedIn"            after="tiho.institutes.repeat.required" />
+    <xed:include ref="rights"                          after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.commentIntern"              after="rights" />
+    <xed:include ref="tiho.editor.repeated.required"   after="tiho.commentIntern" />
+    <xed:include ref="validate.institutes.required"    after="tiho.institutes.repeat.required" />
   </xed:modify>
 
   <xed:modify ref="genres.proceedings">
@@ -303,10 +302,6 @@
     <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]" test="string-length(//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor) &gt; 0" i18n="mir.validation.institution" display="global" />
   </xed:template>
 
-  <xed:template id="validate.author.required">
-    <xed:validate xpath="//mods:mods/mods:name[mods:role/mods:roleTerm[@type='code'][@authority='marcrelator'][text()='aut']]/mods:displayForm" required="true" i18n="mir.validation.author" display="global" />
-  </xed:template>
-
   <xed:template id="validate.subject.de.required">
     <xed:validate xpath="//mods:mods/mods:subject[@xml:lang='de']" test="count(//mods:mods/mods:subject[@xml:lang='de']/mods:topic[string-length(text()) &gt; 0])=3" i18n="tiho.validation.subject.de" display="global" />
   </xed:template>
@@ -449,6 +444,10 @@
 
   <xed:template id="tiho.editor.repeated.required">
     <mir:role.repeated role="edt" label="mir.role.editor" help-text="{i18n:mir.help.role.editor}" class="required" required="true" required-i18n="tiho.validation.editor" />
+  </xed:template>
+  
+  <xed:template id="tiho.author.repeated.required">
+    <mir:role.repeated role="aut" label="mir.role.author" help-text="{i18n:mir.help.role.author}"  class="required" required="true" required-i18n="mir.validation.author" />
   </xed:template>
 
 </xed:template>
