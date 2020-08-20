@@ -99,8 +99,9 @@
   </xed:modify>
 
   <xed:modify ref="hosts.collection.common.publisher">
-    <xed:include ref="tiho.year.issued.required"            after="year.issued" />
+    <xed:include ref="tiho.year.issued.relItem.required"        after="year.issued" />
     <xed:remove  ref="year.issued" />
+    <xed:include ref="validate.relatedItem.title.required"      after="edition" />
   </xed:modify>
 
   <xed:modify ref="hosts.journal">
@@ -109,7 +110,6 @@
     <xed:include ref="tiho.year.issued.relItem.required"        after="year.issued.relItem" />
     <xed:remove  ref="year.issued.relItem" />
     <xed:include ref="validate.relatedItem.title.required"      after="title.journal.relItemsearch" />
-    
   </xed:modify>
 
   <xed:modify ref="genres.journal">

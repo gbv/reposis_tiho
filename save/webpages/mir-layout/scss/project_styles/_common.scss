@@ -33,3 +33,15 @@ blockquote {
 .form-control {
   color: #212529;
 }
+
+.searchbadge, .badge {
+  font-size: 12px;
+  padding-top: 6px;
+}
+
+.input-group-addon.searchbadge {
+  border-width: 1px 1px 1px 0px !important;
+  border: solid #ced4da;
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
