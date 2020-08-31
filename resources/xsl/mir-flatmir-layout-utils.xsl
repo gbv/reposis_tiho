@@ -71,7 +71,7 @@
                 type="text"
                 aria-label="Search" />
               <xsl:choose>
-                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                <xsl:when test="contains($isSearchAllowedForCurrentUser, 'true')">
                   <input name="owner" type="hidden" value="createdby:*" />
                 </xsl:when>
                 <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
