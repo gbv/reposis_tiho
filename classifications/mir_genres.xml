@@ -21,11 +21,11 @@
         <label xml:lang="en" text="Book" />
       </category>
       <category ID="collection">
-        <label xml:lang="de" text="Sammelwerk" />
         <label xml:lang="x-mapping" text="marcgt:series diniPublType:other" />
+        <label xml:lang="de" text="Herausgeberwerk" />
         <label xml:lang="it" text="Compilazione" />
+        <label xml:lang="en" text="Edited Book" />
         <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="en" text="Collection" />
       </category>
       <category ID="proceedings">
         <label xml:lang="x-mapping" text="marcgt:conference_publication diniPublType:conferenceObject" />

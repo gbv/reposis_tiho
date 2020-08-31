@@ -188,13 +188,13 @@
         <label xml:lang="de" text="KELDAT - Kompetenzzentrum für E-Learning, Didaktik und Ausbildungsforschung der Tiermedizin" />
         <label xml:lang="en" text="ZELDA - Clinical Skills Lab" />
       </category>
+      <category ID="wing">
+        <label xml:lang="en" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
+        <label xml:lang="de" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
+      </category>
       <category ID="07">
         <label xml:lang="en" text="Library" />
         <label xml:lang="de" text="Bibliothek" />
-        <category ID="wing">
-          <label xml:lang="en" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
-          <label xml:lang="de" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
-        </category>
       </category>
     </category>
     <category ID="coop">
