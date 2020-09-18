@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Erklärung zur Barrierefreiheit">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h1>Erklärung zur Barrierefreiheit</h1>
+        <p>
+          Informationen über die Zugänglichkeit dieser Webseiten gemäß § 9b NBGG sowie über diesbezügliche Kontaktmöglichkeiten.
+        </p>
+        <p>
+          Diese Erklärung zur Barrierefreiheit gilt für den Webauftritt der TiHo eLib, erreichbar unter der
+          Domain elib.tiho-hannover.de.
+        </p>
+        <h2> 
+          Nicht barrierefreie Inhalte
+        </h2>
+        <p> 
+          Die auf dem Dokumentenserver publizierten Dokumente sind teilweise nicht barrierefrei und können nicht automatisiert in ein
+          barrierefreies Format umgewandelt werden, da
+          <ul>
+           <li> da die UB Hagen nicht das Recht auf die Änderung der Dateien besitzt, </li>
+           <li> die Ausgangsformate nicht zu Verfügungs stehen,</li>
+           <li> die Zitierfähigkeit der Dokumente nicht mehr gewährleistet ist.</li>
+          </ul>
+          Eine nachträgliche manuelle Bearbeitung der Dokumente ist unverhältnismäßig arbeitsaufwendig und wird nur in Ausnahmefällen
+          durchgeführt.
+        </p>
+        <p>
+          Der Dokumentenserver richtet sich an Wissenschafler aus den jeweiligen Fachbereichen. Auf Grund der komplexen Inhalte, 
+          kann eine einfache Sprachgestaltung nicht umgesetzt werden.
+        </p>
+        <p>
+          Der Webauftritt der TiHo eLib wird an die EU-Richtlinie 2016/2102 zur Umsetzung des barrierefreien Internets 
+          öffentlicher Stellen angepasst und optimiert. Die identifizierten Defizite und Mängel befinden sich aktuell 
+          in einem kontinuierlichen Verbesserungsprozess, der sukzessive abgearbeitet wird. Es wird u.a. daran gearbeitet,
+          in Zukunft Dokumente im barrierearmen PDF/UA-Format einzubinden.
+        </p>
+        <h2>
+          Erstellung dieser Erklärung zur Barrierefreiheit
+        </h2>
+        <p>
+          Diese Erklärung wurde am 10.09.2020 erstellt. Die Einschätzung basiert auf Selbstbewertung. 
+        </p>
+        <h2>
+          Kontakt und Feedback
+        </h2>
+        <p>
+          Über folgenden Kontakt können Sie Mängel in Bezug auf die Einhaltung der
+          Barrierefreiheitsanforderungen mitteilen: biblio@tiho-hannover.de
+        </p>
+        <h2>
+          Schlichtungsverfahren
+        </h2>
+        <p>
+          Bei nicht zufriedenstellenden Antworten aus oben genannter Kontaktmöglichkeit können Sie
+          bei der Schlichtungsstelle, eingerichtet bei der Landesbeauftragten für Menschen mit
+          Behinderungen in Niedersachsen, einen Antrag auf Einleitung eines Schlichtungsverfahrens
+          nach dem Niedersächsischen Behindertengleichstellungsgesetz (NBGG) stellen.
+        </p>
+        <p>
+          Die Schlichtungsstelle nach § 9 d NBGG hat die Aufgabe, Streitigkeiten zwischen Menschen mit Behinderungen und öffentlichen
+          Stellen des Landes Niedersachsen, zum Thema Barrierefreiheit in der IT, beizulegen. Das Schlichtungsverfahren ist kostenlos. 
+          Es muss kein Rechtsbeistand eingeschaltet werden.
+        </p>
+        <p>
+          Landesbeauftragte für Menschen mit Behinderungen<br />
+          Hannah-Arendt-Platz 2<br />
+          30159 Hannover <br />
+          <a href="http://www.behindertenbeauftragter-niedersachsen.de/">http://www.behindertenbeauftragter-niedersachsen.de/</a><br />
+          E-Mail: <span class="madress">schlichtungsstelle@ms.niedersachsen.de</span><br />
+          Telefon: +49 (0)0511 120-4010
+        </p>
+      </div>
+    </div>
+  </section>
+  <meta>
+    <log lastEditor="administrator" date="2018-11-27" time="12:30" />
+  </meta>
+</MyCoReWebPage>
