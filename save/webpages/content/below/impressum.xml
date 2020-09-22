@@ -9,7 +9,7 @@
 <address class="bodytext">Bünteweg 2<br />
 Haus 262<br />
 D-30559 Hannover<br />
-Tel.: 0511 953 7101<br />
+Tel.: +49 511 953 7101<br />
 E-Mail: <a href="mailto:biblio@tiho-hannover.de">biblio@tiho-hannover.de</a><br />
 Internet: <a href="https://www.tiho-hannover.de/kliniken-institute/bibliothek/">https://www.tiho-hannover.de/kliniken-institute/bibliothek/</a></address>
 
@@ -17,12 +17,15 @@ Internet: <a href="https://www.tiho-hannover.de/kliniken-institute/bibliothek/">
 
 <address class="bodytext">Bünteweg 2<br />
 30559 Hannover<br />
-Tel.: +49 511 953-60<br />
-Fax: +49 511 953-8050<br />
+Tel.: +49 511 953 60<br />
+Fax: +49 511 953 8050<br />
 E-Mail: <a href="mailto:info@tiho-hannover.de">info@tiho-hannover.de</a><br />
-Internet: <a href="http://www.tiho-hannover.de" target="_blank">www.tiho-hannover.de</a></address>
-Ust-ID-Nr. DE 233060166<br />
-Die Tierärztliche Hochschule Hannover ist eine Stiftung des öffentlichen Rechts. Sie wird durch Ihren Präsidenten Dr. Dr. h. c. mult. Gerhard Greif gesetzlich vertreten.
+Internet: <a href="https://www.tiho-hannover.de">https://</a><a href="http://www.tiho-hannover.de" target="_blank">www.tiho-hannover.de</a></address>
+
+<div class="bodytext">Ust-ID-Nr. DE 233060166</div>
+
+<p class="bodytext">Die Tierärztliche Hochschule Hannover ist eine Stiftung des öffentlichen Rechts. Sie wird durch Ihren Präsidenten Dr. Dr. h. c. mult. Gerhard Greif gesetzlich vertreten.</p>
+
 <h2>Technischer Betrieb des Publikationsservers</h2>
 
 <address>Verbundzentrale des GBV<br />
@@ -31,6 +34,55 @@ Platz der Göttinger Sieben 1<br />
 E-Mail: <a href="mailto:dms-list@lists.gbv.de">dms-list@lists.gbv.de</a><br />
 Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a></address>
 
+<address>
+<h2>Urheberrecht</h2>
+
+<p>Alle Dokumente auf dem Repositorium TiHo eLib unterliegen den geltenden Urheberrechtsbestimmungen des Urheberrechtsgesetzes (UrhG). Hat der/die Autor/Autorin eines Dokumentes nichts anderes in einer Lizenz (CC-Lizenz) bestimmt, so liegen alle Rechte bei den jeweiligen Autor/innen.</p>
+</address>
+
 <address> </address>
 </div>
-</section><section xml:lang="en" title="Impressum"><h2>test test</h2></section><meta><log lastEditor="jdickel" date="2018-12-18" time="15:01" /></meta></MyCoReWebPage>
+</section><section xml:lang="en" title="Impressum"><div>
+<h1>Impressum</h1>
+
+<p>The publication server TiHo eLib is operated by the library of the University of Veterinary Medicine Hannover, Foundation and developed in cooperation with the central unit of the GBV (VZG).</p>
+
+<h2>Library of the University of Veterinary Medicine Hannover Foundation</h2>
+
+<address>Bünteweg 2<br />
+Building 262<br />
+D-30559 Hannover<br />
+Phone: +49 511 953 7101<br />
+e-mail: <a href="mailto:biblio@tiho-hannover.de">biblio@tiho-hannover.de</a><br />
+Internet: <a href="https://www.tiho-hannover.de/kliniken-institute/bibliothek/">https://www.tiho-hannover.de/kliniken-institute/bibliothek/</a></address>
+
+<h2><br />
+University of Veterinary Medicine Hannover Foundation</h2>
+
+<address>Bünteweg 2<br />
+30559 Hannover<br />
+Phone: +49 511 953 60<br />
+fax: +49 511 953 8050<br />
+e-mail: <a href="mailto:info@tiho-hannover.de">info@tiho-hannover.de</a><br />
+Internet: <a href="https://www.tiho-hannover.de">https://www.tiho-hannover.de</a></address>
+
+<address> </address>
+
+<div>Sales tax ID no. DE 233060166</div>
+
+<div>The University of Veterinary Medicine Hannover is a foundation under public law. It is administered by its president Dr. Dr. h. c. mult. Gerhard Greif.</div>
+
+<h2><br />
+Technical operation of the publication server</h2>
+
+<p>Verbundzentrale des GBV<br />
+Platz der Göttinger Sieben 1<br />
+37073 Göttingen<br />
+E-Mail: <a href="mailto:dms-list@lists.gbv.de">dms-list@lists.gbv.de</a><br />
+Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a></p>
+
+<h2>Copyright</h2>
+
+<p>All documents on the TiHo eLib repository are subject to the applicable copyright regulations of the German Copyright Act (UrhG). If the author of a document has not specified otherwise in a license (CC license), all rights are with the respective author(s).</p>
+</div>
+</section><meta><log lastEditor="jdickel" date="2020-08-25" time="13:47" /></meta></MyCoReWebPage>

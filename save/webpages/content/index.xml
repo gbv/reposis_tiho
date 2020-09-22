@@ -2,29 +2,27 @@
 <MyCoReWebPage><section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers TiHo eLib"><div class="container">
 <div class="row">
 <div class="col-12">
-<p>
-  <strong><span style="color:#3366cc;">Dieser Service befindet sich noch im Aufbau! Bitte wenden Sie sich für die Einreichung von Open-Access-Veröffentlichungen und Hochschulschriften wie bisher an </span><a href="mailto:open.access@tiho-hannover.de">open.access@tiho-hannover.de</a><span style="color:#3366cc;"> bzw. an die <a href="https://www.tiho-hannover.de/kliniken-institute/bibliothek/publizieren-und-forschen/hochschulschriften/">Hochschulschriftenstelle</a>.</span></strong><span style="color:#3366cc;"><strong></strong></span>
-</p>
-
-<h2>TiHo eLib</h2>
+<h2><span style="color:#006ab3;"><strong>TiHo eLib</strong></span></h2>
 
 <p>TiHo eLib ist das Repositorium der Stiftung Tierärztliche Hochschule Hannover (TiHo). Es bietet die Möglichkeit, elektronische Veröffentlichungen und Forschungsdaten aus der Veterinärmedizin und angrenzenden Disziplinen kostenfrei zu publizieren.</p>
 
-<p><u>Aktuelle Angebote:</u></p>
+<p><span style="color:#006ab3;"><strong>Aktuelle Angebote</strong></span></p>
 
 <ul>
-	<li>Hochschulschriften der TiHo</li>
-	<li>Hochschulbibliographie ab 2020 (eingeschränkt)</li>
+	<li><strong>Hochschulschriften der TiHo</strong></li>
+	<li><strong>Hochschulbibliographie ab 2019</strong></li>
 </ul>
 
-<p><u>Geplante Angebote:</u></p>
+<p><span style="color:#006ab3;"><strong>Geplante Angebote</strong></span></p>
 
 <ul>
-	<li>Digitale Sammlung Veterinärmedizin</li>
-	<li>Forschungsdaten</li>
-	<li>Open-Access-Veröffentlichungen</li>
+	<li><strong>Digitale Sammlung Veterinärmedizin</strong></li>
+	<li><strong>Forschungsdaten</strong></li>
+	<li><strong>Open-Access-Veröffentlichungen</strong><br />
+	Für die Einreichung von Open-Access-Veröffentlichungen wenden Sie sich bitte wie bisher an <a href="mailto:open.access@tiho-hannover.de">open.access@tiho-hannover.de</a><br />
+	 </li>
 </ul>
 </div>
 </div>
 </div>
-</section><meta><log lastEditor="jdickel" date="2020-07-15" time="08:31" /></meta></MyCoReWebPage>
+</section><meta><log lastEditor="akakau" date="2020-09-11" time="17:06" /></meta></MyCoReWebPage>
