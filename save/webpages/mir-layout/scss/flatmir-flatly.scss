@@ -1,7 +1,31 @@
-@import "project_styles/_variables";
-@import "common/variables";
-@import  "../assets/bootswatch/flatly/variables";
-@import  "../assets/bootstrap/bootstrap";
-@import  "../assets/bootswatch/flatly/bootswatch";
-@import "flatmir/layout";
+// **************************************************
+//  sass master
+//  - includes all needed styles
+// **************************************************
+
+//  variables
+// -------------------------
+//  - bootstrap and bootswatch variables are all defined with the default flag
+//  - a default is only used, when a variable with this name does not exist yet
+//  - but the last defined variable with a default flag will be used
+//  - that's why we import the project variables first
+//  - but import the bootswatch modifications after the bootstrap settings
+
+@import "project_styles/_variables";                // project variables
+@import "common/variables";                         // mir variables
+@import  "../assets/bootswatch/flatly/variables";   // bootswatch variables
+
+//  styles
+// -------------------------
+//  now the usual rule is valid: the last setting wins
+
+//  basic settings
+@import  "../assets/bootstrap/bootstrap";           // bootstrap variables and styles
+@import  "../assets/bootswatch/flatly/bootswatch";  // bootswatch styles
+@import "flatmir/layout";                           // mir styles
+
+//  project styles
 @import "project_styles/_common";
+
+//  Bootstrap/Bootswatch workaround, hopefully obsolete in a while 
+@import "project_styles/_workaround";

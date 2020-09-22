@@ -5,6 +5,8 @@
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_institutes" />
   <categories>
     <category ID="kliniken">
+      <label xml:lang="en" text="Clinics " />
+      <label xml:lang="x-group" text="true" />
       <label xml:lang="de" text="Kliniken der Tierärztlichen Hochschule" />
       <category ID="15">
         <label xml:lang="de" text="Klinik für Geflügel" />
@@ -37,7 +39,8 @@
     </category>
     <category ID="institute">
       <label xml:lang="de" text="Institute der Tierärztlichen Hochschule" />
-      <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
+      <label xml:lang="x-group" text="true" />
+      <label xml:lang="en" text="Institutes" />
       <category ID="27">
         <label xml:lang="en" text="Institute for Anatomy" />
         <label xml:lang="de" text="Anatomisches Institut" />
@@ -55,12 +58,12 @@
         <label xml:lang="de" text="Institut für Lebensmitteltoxikologie" />
       </category>
       <category ID="18">
+        <label xml:lang="de" text="Institut für Mikrobiologie" />
         <label xml:lang="en" text="Institute for Microbiology" />
-        <label xml:lang="de" text="Institut für Mikrobiologie, Zentrum für Infektionsmedizin" />
       </category>
       <category ID="19">
-        <label xml:lang="en" text="Institute for Parasitology,  Dept. of Infectious Diseases" />
-        <label xml:lang="de" text="Institut für Parasitologie, Zentrum für Infektionsmedizin" />
+        <label xml:lang="en" text="Institute for Parasitology (Dept. of Infectious Diseases)" />
+        <label xml:lang="de" text="Institut für Parasitologie" />
       </category>
       <category ID="20">
         <label xml:lang="de" text="Institut für Pathologie" />
@@ -99,8 +102,8 @@
         <label xml:lang="de" text="Institut für Tierzucht und Vererbungsforschung" />
       </category>
       <category ID="21">
+        <label xml:lang="en" text="Institute of Virology (Dept. of Infectious Diseases)" />
         <label xml:lang="de" text="Institut für Virologie, Zentrum für Infektionsmedizin" />
-        <label xml:lang="en" text="Institute of Virology, Dept. of Infectious Diseases" />
       </category>
       <category ID="33">
         <label xml:lang="en" text="Institute of Zoology" />
@@ -112,10 +115,12 @@
       </category>
     </category>
     <category ID="fachgebiete">
+      <label xml:lang="en" text="Special Units and Field Stations" />
       <label xml:lang="de" text="Fachgebiete und Außenstellen der Tierärztlichen Hochschule" />
+      <label xml:lang="x-group" text="true" />
       <category ID="34">
-        <label xml:lang="en" text="Institute for the History of Veterinary Medicine and Domestic Animals" />
         <label xml:lang="de" text="Fachgebiet Geschichte der Veterinärmedizin" />
+        <label xml:lang="en" text="Institute for the History of Veterinary Medicine and Domestic Animals" />
       </category>
       <category ID="35">
         <label xml:lang="en" text="Institute for General Radiology and Medical Physics" />
@@ -133,6 +138,10 @@
         <label xml:lang="de" text="Außenstelle für Epidemiologie (Bakum)" />
         <label xml:lang="en" text="Field Station for Epidemiology in Bakum" />
       </category>
+      <category ID="05">
+        <label xml:lang="en" text="Farm for Education and Research in Ruthe" />
+        <label xml:lang="de" text="Lehr- und Forschungsgut Ruthe" />
+      </category>
     </category>
     <category ID="zentren">
       <label xml:lang="en" text="Research Centers" />
@@ -142,10 +151,55 @@
         <label xml:lang="de" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
         <label xml:lang="en" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
       </category>
+      <category ID="zecan">
+        <label xml:lang="de" text="Virtuelles Zentrum für Canine Neurowissenschaften (ZeCaN) " />
+        <label xml:lang="en" text="Virtual Center for Canine Neurosciences (ZeCaN)" />
+      </category>
+      <category ID="vzet">
+        <label xml:lang="en" text="Virtual Center for Replacement and Complementary Methods to Animal Testing (VZET)" />
+        <label xml:lang="de" text="Virtuelles Zentrum für Ersatz- und Ergänzungsmethoden zum Tierversuch (VZET)" />
+      </category>
+      <category ID="vzr">
+        <label xml:lang="de" text="Virtuelles Zentrum für Reproduktionsmedizin" />
+        <label xml:lang="en" text="Virtual Center for Reproductive Medicine" />
+      </category>
+      <category ID="zsn">
+        <label xml:lang="en" text="Center for Systems Neuroscience (ZSN)" />
+        <label xml:lang="de" text="Zentrum für Systemische Neurowissenschaften (ZSN)" />
+      </category>
     </category>
-    <category ID="Unis">
-      <label xml:lang="de" text="Kliniken der Tierärztlichen Hochschule" />
-      <label xml:lang="en" text="Clinics of the University of Veterinary Medicine" />
+    <category ID="tihodivers">
+      <label xml:lang="de" text="Sonstige Einrichtungen der Tierärztlichen Hochschule" />
+      <label xml:lang="en" text="Other Departements" />
+      <label xml:lang="x-group" text="true" />
+      <category ID="06">
+        <label xml:lang="en" text="BEST-VET" />
+        <label xml:lang="de" text="BEST-VET" />
+      </category>
+      <category ID="60">
+        <label xml:lang="de" text="ZELDA - Clinical Skills Lab" />
+        <label xml:lang="en" text="ZELDA - Clinical Skills Lab" />
+      </category>
+      <category ID="04">
+        <label xml:lang="en" text="ZELDA - E-Learning-Consulting" />
+        <label xml:lang="de" text="ZELDA - E-Learning-Beratung" />
+      </category>
+      <category ID="keldat">
+        <label xml:lang="de" text="KELDAT - Kompetenzzentrum für E-Learning, Didaktik und Ausbildungsforschung der Tiermedizin" />
+        <label xml:lang="en" text="ZELDA - Clinical Skills Lab" />
+      </category>
+      <category ID="wing">
+        <label xml:lang="en" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
+        <label xml:lang="de" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
+      </category>
+      <category ID="07">
+        <label xml:lang="en" text="Library" />
+        <label xml:lang="de" text="Bibliothek" />
+      </category>
+    </category>
+    <category ID="coop">
+      <label xml:lang="de" text="Externe Kooperationspartner" />
+      <label xml:lang="en" text="Cooperating Institutions" />
     </category>
   </categories>
 </mycoreclass>
