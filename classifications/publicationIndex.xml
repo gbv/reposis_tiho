@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="publicationIndex">
+    <label xml:lang="de" text="Auswertung Publikationsindex" />
+    <label xml:lang="en" text="Reporting publication index" />
+    <categories>
+        <category ID="2021">
+            <label xml:lang="de" text="2021" />
+            <label xml:lang="en" text="2021" />
+        </category>
+        <category ID="2020">
+            <label xml:lang="de" text="2020" />
+            <label xml:lang="en" text="2020" />
+        </category>
+        <category ID="2019">
+            <label xml:lang="en" text="2019" />
+            <label xml:lang="de" text="2019" />
+        </category>
+    </categories>
+</mycoreclass>

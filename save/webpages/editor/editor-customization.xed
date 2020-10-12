@@ -10,7 +10,8 @@
     <xed:remove  ref="rights" />
     <xed:include ref="tiho.institutes.repeat"               after="toc-layout" />
     <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat" />
-    <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
+    <xed:include ref="tiho.publicationIndex.admin"          after="tiho.toBeDisplayedIn" />
+    <xed:include ref="rights"                               after="tiho.publicationIndex.admin" />
     <xed:include ref="tiho.commentIntern"                   after="rights" />
     <xed:include ref="name.extended.repeated"               after="tiho.commentIntern" />
   </xed:modify>
@@ -342,7 +343,52 @@
       </div>
     </xed:repeat>
   </xed:template>
-  
+
+  <xed:template id="tiho.publicationIndex.admin">
+    <xed:bind xpath="mods:classification[@authorityURI='https://elib.tiho-hannover.de/api/v1/classifications/publicationIndex'][@displayLabel='publicationIndex']">
+      <div class="form-group row {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="editor.search.tiho.publicationIndex" />
+          :
+        </label>
+        <div class="col-md-6">
+          <xed:bind xpath="@valueURIxEditor">
+            <select class="form-control form-control-inline">
+              <option value="">
+                <xed:output i18n="mir.select.optional" />
+              </option>
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:publicationIndex" />
+            </select>
+          </xed:bind>
+        </div>
+        <mir:help-pmud help-text="{i18n:tiho.help.publicationIndex}" pmud="false" />
+      </div>
+    </xed:bind>
+  </xed:template>
+
+  <!-- TODO: Checkbox with last two years for submitter/editor forms -->
+  <xed:template id="tiho.publicationIndex">
+    <xed:bind xpath="mods:classification[@authorityURI='https://elib.tiho-hannover.de/api/v1/classifications/publicationIndex'][@displayLabel='publicationIndex']">
+      <div class="form-group row {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="editor.search.tiho.publicationIndex" />
+          :
+        </label>
+        <div class="col-md-6">
+          <xed:bind xpath="@valueURIxEditor">
+            <select class="form-control form-control-inline">
+              <option value="">
+                <xed:output i18n="mir.select.optional" />
+              </option>
+              <xed:include uri="xslStyle:items2options:classification:editor:-1:children:publicationIndex" />
+            </select>
+          </xed:bind>
+        </div>
+        <mir:help-pmud help-text="{i18n:tiho.help.publicationIndex}" pmud="false" />
+      </div>
+    </xed:bind>
+  </xed:template>
+
   <xed:template id="tiho.commentIntern">
     <mir:textarea xpath="mods:note[@type='admin']" placeholder="{i18n:tiho.placeholder.commentIntern}" help-text="{i18n:tiho.help.commentIntern}" label="mir.comment" rows="2" />
   </xed:template>
