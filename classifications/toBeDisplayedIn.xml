@@ -5,8 +5,12 @@
   <label xml:lang="de" text="Anzuzeigen in" />
   <categories>
     <category ID="bibliography">
-      <label xml:lang="en" text="Bibliography" />
-      <label xml:lang="de" text="Bibliographie" />
+      <label xml:lang="de" text="Verzeichnis wissenschaftlicher Veröffentlichungen" />
+      <label xml:lang="en" text="Research publications" />
+    </category>
+    <category ID="bibliographyPlus">
+      <label xml:lang="de" text="Hochschulbibliographie allgemein" />
+      <label xml:lang="en" text="TiHo bibliography" />
     </category>
   </categories>
 </mycoreclass>
