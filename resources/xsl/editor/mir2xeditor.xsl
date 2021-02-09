@@ -200,6 +200,70 @@
     </div>
   </xsl:template>
 
+  <xsl:template match="mir:htmlArea">
+    <xsl:variable name="xed-val-marker" > {$xed-validation-marker} </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="@repeat = 'true'">
+        <xed:repeat xpath="{@xpath}" min="{@min}" max="{@max}">
+          <div class="form-group row {@class} {$xed-val-marker}">
+            <label class="col-md-3 col-form-label text-right">
+              <xed:output i18n="{@label}" />
+            </label>
+            <div class="col-md-6">
+              <xsl:choose>
+                <xsl:when test="@bind" >
+                  <xed:bind xpath="{@bind}" >
+                    <textarea class="form-control">
+                      <xsl:copy-of select="@rows" />
+                      <xsl:copy-of select="@placeholder" />
+                    </textarea>
+                  </xed:bind>
+                </xsl:when>
+                <xsl:otherwise>
+                  <textarea class="form-control ckeditor">
+                    <xsl:copy-of select="@rows" />
+                    <xsl:copy-of select="@placeholder" />
+                  </textarea>
+                </xsl:otherwise>
+              </xsl:choose>
+            </div>
+            <div class="col-md-3">
+              <xsl:if test="string-length(@help-text) &gt; 0">
+                <xsl:call-template name="mir-helpbutton" />
+              </xsl:if>
+              <xsl:call-template name="mir-pmud" />
+            </div>
+          </div>
+          <xsl:call-template name="mir-required" />
+        </xed:repeat>
+      </xsl:when>
+      <xsl:otherwise>
+        <xed:bind xpath="{@xpath}">
+          <div class="form-group row {@class} {$xed-val-marker}">
+            <label class="col-md-3 col-form-label text-right">
+              <xed:output i18n="{@label}" />
+            </label>
+            <div class="col-md-6">
+              <textarea class="form-control ckeditor">
+                <xsl:copy-of select="@rows" />
+                <xsl:copy-of select="@placeholder" />
+              </textarea>
+            </div>
+            <div class="col-md-3">
+              <xsl:if test="string-length(@help-text) &gt; 0">
+                <xsl:call-template name="mir-helpbutton" />
+              </xsl:if>
+              <xsl:if test="@pmud = 'true'">
+                <xsl:call-template name="mir-pmud" />
+              </xsl:if>
+            </div>
+          </div>
+          <xsl:call-template name="mir-required" />
+        </xed:bind>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="mir:textarea">
     <xsl:variable name="xed-val-marker" > {$xed-validation-marker} </xsl:variable>
     <xsl:choose>
@@ -304,11 +368,16 @@
   </xsl:template>
 
   <xsl:template match="mir:role.repeated">
-    <xsl:variable name="xed-val-marker" > {$xed-validation-marker} </xsl:variable>
-    <xed:repeat xpath="mods:name[@type='personal' or not(@type) or (@type='corporate' and not(@authorityURI='{$institutesURI}'))][mods:role/mods:roleTerm[@type='code'][@authority='marcrelator']='{@role}']" min="1" max="100">
+    <xsl:variable name="xed-val-marker">
+      {$xed-validation-marker}
+    </xsl:variable>
+    <xed:repeat
+      xpath="mods:name[@type='personal' or not(@type) or (@type='corporate' and not(@authorityURI='{$institutesURI}'))][mods:role/mods:roleTerm[@type='code'][@authority='marcrelator']='{@role}']"
+      min="1" max="100">
       <xed:bind xpath="@type" initially="personal"/>
       <xed:bind xpath="@simpleEditor" default="true"/>
       <xed:bind xpath="mods:displayForm"> <!-- Move down to get the "required" validation right -->
+        <div class="personExtended_box">
         <div class="form-group row {@class} {$xed-val-marker}">
           <xed:bind xpath=".."> <!-- Move up again after validation marker is set -->
             <label class="col-md-3 col-form-label text-right">
@@ -316,16 +385,20 @@
             </label>
             <div class="col-md-6">
               <div class="controls">
-                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="person.fields" />
+                  <xed:include
+                    uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"
+                    ref="person.fields" />
               </div>
             </div>
             <div class="col-md-3">
               <xsl:if test="string-length(@help-text) &gt; 0">
-                <xsl:call-template name="mir-helpbutton" />
+                  <xsl:call-template
+                    name="mir-helpbutton" />
               </xsl:if>
               <xsl:call-template name="mir-pmud" />
             </div>
           </xed:bind>
+        </div>
         </div>
         <xsl:call-template name="mir-required" />
       </xed:bind>
