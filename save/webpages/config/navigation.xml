@@ -108,7 +108,7 @@
             <label xml:lang="en">Guidelines</label>
         </item>
         <item href="/content/publish/contract.xml" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Vertragsbedingungen</label>
+            <label xml:lang="de">Veröffentlichungserklärung</label>
             <label xml:lang="en">Terms &amp; Conditions</label>
         </item>
     </menu>
