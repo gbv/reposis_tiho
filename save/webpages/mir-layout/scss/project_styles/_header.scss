@@ -1,0 +1,145 @@
+/* file task
+ * - task description
+ */
+
+ // Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  body {
+    padding-top: 80px; // header height
+  }
+
+  #project_logo_box {
+    position: fixed;
+    left: 3.125rem;
+    top: .9375rem;
+    z-index: 1100;
+    img {
+      width: 110px;
+      height: 110px;
+      box-shadow: 0 .375rem .25rem -.125rem rgba(0,0,0,.25);
+      background: #fff;
+      border-radius: 50%;
+    }
+    .project-name {
+      position: absolute;
+      top: 0;
+      left: 110px;
+      span {
+        font-size: 2.5rem;
+        font-family: $tiho-font-serif;
+        font-weight: 400;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  #header_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.25);
+    margin: 0;
+    z-index: 1000;
+    min-width: 320px;
+  }
+
+  .first-aid-button {
+    width: 4.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e00000;
+    &__link {
+      color: #fff;
+      font-size: 1.25rem;
+      overflow: hidden;
+    }
+    &__icon {
+      width: 2.125rem;
+    }
+    &__txt {
+      display: none;
+    }
+  }
+
+  .search-button {
+    position: relative;
+    border-left: .0625rem solid #dfdfdf;
+    width: 4.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .js-search-toggle {
+      &::after {
+        content: " ";
+        position: absolute;
+        top: .3125rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-size: 1.5625rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2722%27 viewBox=%27-2 -2 22 26%27%3E%3Cpath stroke=%27black%27 fill=%27black%27 stroke-width=%271%27 d=%27M18.869 19.162l-5.943-6.484A7.448 7.448 0 0015.001 7.5c0-2.003-.78-3.887-2.197-5.303S9.504 0 7.501 0 3.614.78 2.198 2.197.001 5.497.001 7.5s.78 3.887 2.197 5.303S5.498 15 7.501 15a7.441 7.441 0 004.688-1.645l5.943 6.483a.497.497 0 00.707.031.5.5 0 00.031-.706zM1 7.5C1 3.916 3.916 1 7.5 1S14 3.916 14 7.5 11.084 14 7.5 14 1 11.084 1 7.5z%27/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .searchfield_box {
+    position: absolute;
+    top: 73px;
+    left: 0px;
+    width: 100%;
+    background-color: rgb(0, 105, 180);
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    padding: 1rem;
+    box-shadow: 0 .125rem .3125rem rgba(0,0,0,.25);
+  }
+
+  #searchInput {
+    width: 50%;
+    max-width: 800px;
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+  #searchInput {
+    width: auto;
+  }
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+  #project_logo_box {
+    left: 15px;
+    img {
+      display: none;
+    }
+    .project-name {
+      left: 0;
+      span {
+        margin-left: 0;
+      }
+    }
+  }
+}

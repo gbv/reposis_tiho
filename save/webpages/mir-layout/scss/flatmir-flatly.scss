@@ -25,7 +25,8 @@
 @import "flatmir/layout";                           // mir styles
 
 //  project styles
+@import "project_styles/_header";
+@import "project_styles/_footer";
+@import "project_styles/_typo";
+@import "project_styles/_navigation";
 @import "project_styles/_common";
-
-//  Bootstrap/Bootswatch workaround, hopefully obsolete in a while 
-@import "project_styles/_workaround";

@@ -2,12 +2,13 @@
 // Variables
 // --------------------------------------------------
 
-// --------------------------------------------------
-// Reset defaults
-// --------------------------------------------------
+// project settings
+$tiho-blau: #006ab3;
+$tiho-font-sans: "Droid Sans", sans-serif;
+$tiho-font-serif: "Droid Serif", serif;
 
-// Brand colors
-// -------------------------
+
+// overwrite bootstrap variables
 $gray-base: rgb(0, 0, 0);
 $gray-darker: lighten($gray-base, 13.5%);
 $gray-dark: rgb(255, 255, 255);
@@ -21,26 +22,29 @@ $warning: rgb(243, 156, 18);
 $danger: rgb(231, 76, 60);
 $brand-warning: $warning;
 
-
-// Links
-// -------------------------
 $text-color: rgb(0, 0, 0);
 $link-color: $info;
 $link-hover-color: $link-color;
 
-
-// Misc
 $web-font-path: "https://webfonts.gbv.de/css?family=Roboto:400,700,400italic";
 $font-family-sans-serif: Helvetica, Arial, sans-serif;
 $line-height-base: 1.5;
 
 $font-size-base: 1rem;
 
-$h1-font-size: 2.25rem;
-$h2-font-size: 1.5rem;
-$h3-font-size: 1.125rem;
+$h1-font-size: 2.875rem;
+$h2-font-size: 2.125rem;
+$h3-font-size: 1.25rem;
 
 $font-weight-bold: 700 !default;
 $font-weight-bolder: $font-weight-bold;
 
+$navbar-light-color: black;
+$navbar-light-hover-color: black;
 
+$dropdown-bg: $tiho-blau;
+$dropdown-color: white;
+$dropdown-link-color: white;
+$dropdown-link-hover-color: white;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-bg: $tiho-blau;

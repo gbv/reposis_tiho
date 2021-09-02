@@ -13,3 +13,5 @@ resources/META-INF/persistence.xml
 MCRWebCLI-unprocessed-commands.txt
 maven/tiho-module/target/
 deprecated.active.properties
+data/
+lib/h2-1.4.196.jar

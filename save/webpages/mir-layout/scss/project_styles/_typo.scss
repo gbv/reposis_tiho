@@ -1,41 +1,29 @@
-/* unspecific settings
- * - MIR / Boostrap layout quick fixes/adjustments - ToDo: repair
+/* typography
+ * - all about fonts
  */
 
  // Extra large devices (large desktops)
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-.info-button {
-  padding: 4px 12px;
-}
+  body {
+    font-family: $tiho-font-sans;
+  }
 
-blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
-  border-left: 5px solid #ecf0f1;
-}
+  h1 {
+    color: $tiho-blau;
+    font-family: $tiho-font-serif;
+    font-weight: 400;
+    margin-bottom: 5rem;
+  }
 
-.breadcrumb {
-  padding: .25rem 1rem;
-}
-
-.form-control {
-  color: #212529;
-}
-
-.searchbadge, .badge {
-  font-size: 12px;
-  padding-top: 6px;
-}
-
-.input-group-addon.searchbadge {
-  border-width: 1px 1px 1px 0px !important;
-  border: solid #ced4da;
-  border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
+  h2 {
+    font-family: $tiho-font-sans;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
 
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {

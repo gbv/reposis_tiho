@@ -1,0 +1,147 @@
+/* navigation
+ * - menues and links
+ */
+
+ // Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+  .mir-main-nav {
+    &__entries {
+      height:100%;
+    }
+    .navbar {
+      padding: 0;
+      height: 73px;
+    }
+    .navbar-nav {
+      height: 100%;
+    }
+    #basket-list-item,
+    .nav-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height:100%;
+      border-top: .125rem solid transparent;
+      margin-right: 2rem;
+      &.active {
+        border-top-color: $link-color;
+        .nav-link {
+          color: $link-color;
+        }
+      }
+    }
+    .nav-link {
+      color: black;
+      border-top-color: transparent;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: italic;
+      font-family: $tiho-font-serif;
+    }
+    .dropdown-menu {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      right: 0;
+      left: auto;
+      margin-top: 0;
+    }
+    .dropdown-item {
+      border-bottom: 1px dotted white;
+      font-family: $tiho-font-serif;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .mir-lang {
+      margin-left: 3rem;
+      .nav-link {
+        color: $link-color;
+      }
+    }
+    li:last-child {
+      .dropdown-item {
+        border: none;
+      }
+    }
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+  .mir-main-nav {
+    #basket-list-item,
+    .nav-item {
+      margin-right: 1rem;
+    }
+    .mir-lang {
+      margin-left: 1rem;
+    }
+  }
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+  .navbar {
+    justify-content: flex-end;
+  }
+  #mir-main-nav-collapse-box {
+    position: absolute;
+    top: 73px;
+    left: 0;
+    background-color: white;
+    z-index: 1200;
+    height: auto;
+    width: 100%;
+  }
+  .mir-main-nav {
+    .navbar-nav {
+      border-top: 1px solid $primary;
+      box-shadow: 0 .125rem .3125rem rgba(0,0,0,.25);
+      padding: 0 2rem;
+    }
+    #basket-list-item,
+    .nav-item {
+      flex-direction: column;
+      //border-top: 1px solid $tiho-blau;
+      border-bottom: 1px dotted black;
+      margin-right: 0;
+      &:last-child {
+        border: none;
+      }
+    }
+    .nav-link {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .mir-lang {
+      margin-left: 0;
+    }
+    .dropdown-menu {
+      min-width: 100%;
+      border-radius: 0;
+    }
+    .dropdown-item {
+      text-align: center;
+    }
+    #basket-list-item.active,
+    .nav-item.active {
+      border-top-color: transparent;
+    }
+  }
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

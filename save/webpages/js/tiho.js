@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-  if ( 
+  if (
     $("input[name='genre']").val() == 'dissertation'   ||
     $("input[name='genre']").val() == 'habilitation'   ||
     $("input[name='genre']").val() == 'diploma_thesis' ||
@@ -45,5 +45,7 @@ $(document).ready(function() {
   var userID = $("#currentUser strong").html();
   var newHref = 'https://elib.tiho-hannover.de/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:' + userID + '&fq=objectType:mods';
   $("a[href='https://elib.tiho-hannover.de/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:USERNAME']").attr('href', newHref);
+  var newHrefTest = 'https://reposis-test.gbv.de/tiho/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:' + userID + '&fq=objectType:mods';
+  $("a[href='https://reposis-test.gbv.de/tiho/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:USERNAME']").attr('href', newHrefTest);
 
 });
