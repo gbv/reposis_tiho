@@ -7,7 +7,7 @@
 // no (xl) media query necessary (desktop first)
 
   body {
-    padding-top: 80px; // header height
+    padding-top: 150px; // header height
   }
 
   #project_logo_box {
@@ -31,6 +31,7 @@
         font-family: $tiho-font-serif;
         font-weight: 400;
         margin-left: 1rem;
+        white-space: nowrap;
       }
     }
   }

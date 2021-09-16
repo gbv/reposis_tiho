@@ -15,7 +15,7 @@
          <img src="{$WebApplicationBaseURL}images/logo-tiho.svg" alt="Stiftung Tierärztliche Hochschule Hannover (TiHo)" title="zur Startseite" />
       </a>
       <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}" class="project-name">
-        <span>eLib</span>
+        <span>TiHo eLib</span>
       </a>
     </div>
 
@@ -51,24 +51,11 @@
                   </xsl:choose>
                 </xsl:for-each>
                 <xsl:call-template name="mir.basketMenu" />
+                <xsl:call-template name="mir.loginMenu" />
                 <xsl:call-template name="mir.languageMenu" />
               </ul>
             </div>
-            <div class="search-button">
-              <a
-                data-toggle="collapse"
-                href="#searchfield_box"
-                role="button"
-                aria-expanded="false"
-                aria-controls="searchfield_box"
-                class="js-search-toggle" />
-            </div>
-            <div class="first-aid-button">
-              <a href="https://www.tiho-hannover.de/notdienst" class="first-aid-button__link">
-                <svg class="first-aid-button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 388.8 388.8"><path style="fill:#fff;" d="M222 210c-5 0-8-4-8-8v-37h-39v37c0 4-4 8-8 8h-37v39h37c4 0 8 3 8 8v36h39v-36c0-5 3-8 8-8h36v-39h-36z"></path><path style="fill:#fff;" d="M334 89H55c-25 0-55 15-55 56v173c0 41 30 56 55 56h279c25 0 55-15 55-56V145c0-41-30-56-55-56zm-60 164c0 6-5 12-12 12h-32v32c0 7-5 12-12 12h-47c-7 0-12-5-12-12v-32h-33c-6 0-12-6-12-12v-47c0-7 6-12 12-12h33v-33c0-6 5-12 12-12h47c6 0 12 6 12 12v33h32c7 0 12 5 12 12v47zM246 15H146a23 23 0 00-25 25v36h16V40c0-3 0-9 9-9h97c9 0 9 6 9 9v36h16V40c0-13-9-24-22-25z"></path></svg>
-                <span class="first-aid-button__txt">Notdienst</span>
-              </a>
-            </div>
+
           </nav>
         </div>
       </div>
@@ -76,7 +63,7 @@
       <form
         id="searchfield_box"
         action="{$WebApplicationBaseURL}servlets/solr/find"
-        class="searchfield_box form-inline my-0 collapse"
+        class="searchfield_box form-inline my-0"
         role="search">
         <input
           name="condQuery"
@@ -99,20 +86,6 @@
       </form>
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div id="options_nav_box" class="mir-prop-nav">
-            <nav>
-              <ul class="navbar-nav ml-auto flex-row">
-                <xsl:call-template name="mir.loginMenu" />
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </xsl:template>
 
   <xsl:template name="mir.jumbotwo">
@@ -125,58 +98,48 @@
       <div class="row tiho-footer-card">
         <div class="container">
           <div class="row">
-            <div class="col-xl-3 col-md-6 mb-3">
-              <h3 class="">TiHo-Services</h3>
+            <div class="col-xl-6 col-md-6 mb-3">
+              <h3 class="">Bibliotheks - Services</h3>
               <ul>
                 <li>
-                  <a href="/universitaet/die-tiho/ueber-die-tiho" title="Universität">
-                    <span>Universität</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek" title="Bibliothek">
+                    <span>Bibliothek</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/studium-lehre" title="Studium &amp; Lehre">
-                    <span>Studium &amp; Lehre</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/ausleihen-und-bestellen" title="Ausleihen und Bestellen">
+                    <span>Ausleihen und Bestellen</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/forschung" title="Forschung">
-                    <span>Forschung</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/suchen-und-finden" title="Suchen und Finden Übersicht">
+                    <span>Suchen und Finden Übersicht</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/kliniken-institute" title="Kliniken &amp; Institute">
-                    <span>Kliniken &amp; Institute</span>
-                  </a>
-                </li>
-              </ul>
-              <p><a href="/login">TiHo intern</a></p>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-3">
-              <h3 class="">Informationen</h3>
-              <ul>
-                <li>
-                  <a href="/notdienst" title="Notdienst">
-                    <span>Notdienst</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/lernen-und-arbeiten" title="Lernen und Arbeiten">
+                    <span>Lernen und Arbeiten</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/anfahrt" title="Anfahrt">
-                    <span>Anfahrt</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/schreiben-und-publizieren" title="Schreiben und Publizieren Übersicht">
+                    <span>Schreiben und Publizieren Übersicht</span>
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="col-xl-6 col-md-12">
+            <div class="col-xl-6 col-md-6">
               <h3 class="">Kontakt</h3>
               <p>
                 Stiftung Tierärztliche Hochschule Hannover<br/>
-                Bünteweg 2<br />
+                Bibliothek<br /><br />
+                Bünteweg 2, Gebäude 262<br />
                 30559 Hannover
               </p>
               <p>
-                Tel.: +49 511 953-60<br />
-                Fax: +49 511 953-8050<br/>
-                <a href="javascript:linkTo_UnCryptMailto(%27kygjrm8gldmYrgfm%2Bfyllmtcp%2Cbc%27);">info(at)tiho-hannover.de</a><br />
+                Tel.: +49 511 953-7100<br />
+                Fax: +49 511 953-7119<br/>
+                <a href="mailto:biblio@tiho-hannover.de">biblio(at)tiho-hannover.de</a><br />
                 <a href="https://www.tiho-hannover.de/" target="_blank">www.tiho-hannover.de</a>
               </p>
               <a href="https://www.facebook.com/tihohannover" target="_blank" a="">

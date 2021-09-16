@@ -33,8 +33,8 @@
         </item>
     </menu>
     <menu id="search">
-        <label xml:lang="de">Suche</label>
-        <label xml:lang="en">Search</label>
+        <label xml:lang="de">Erweiterte Suche</label>
+        <label xml:lang="en">Extended Search</label>
         <item href="/content/search/simple.xed" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">einfach</label>
             <label xml:lang="en">simple</label>
