@@ -131,23 +131,20 @@
             <div class="col-xl-6 col-md-6">
               <h3 class="">Kontakt</h3>
               <p>
-                Stiftung Tierärztliche Hochschule Hannover<br/>
-                Bibliothek<br /><br />
+                <strong>
+                  Stiftung Tierärztliche Hochschule Hannover,<br/>
+                  Bibliothek<br />
+                </strong>
                 Bünteweg 2, Gebäude 262<br />
                 30559 Hannover
               </p>
               <p>
                 Tel.: +49 511 953-7100<br />
                 Fax: +49 511 953-7119<br/>
+                <br/>
                 <a href="mailto:biblio@tiho-hannover.de">biblio(at)tiho-hannover.de</a><br />
-                <a href="https://www.tiho-hannover.de/" target="_blank">www.tiho-hannover.de</a>
+                <a href="https://www.tiho-hannover.de/bibliothek" target="_blank">www.tiho-hannover.de/bibliothek</a>
               </p>
-              <a href="https://www.facebook.com/tihohannover" target="_blank" a="">
-                <img src="https://www.tiho-hannover.de/fileadmin/_processed_/c/2/csm_f_logo_RGB-Black_100_65b005d42c.png" alt="Facebook-Logo" style="margin-right: 30px;" width="50" height="50" border="3" align="left" />
-              </a>
-              <a href="https://www.youtube.com/user/TiHoVideos" target="_blank" a="">
-                <img src="https://www.tiho-hannover.de/fileadmin/_processed_/8/3/preview_youtube_social_circle_dark_9420a7e292.png" alt="youtube-Logo" width="50" height="50" border="3" align="left" />
-              </a>
             </div>
           </div>
         </div>
