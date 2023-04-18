@@ -3,6 +3,14 @@
     <label xml:lang="de" text="Auswertung Publikationsindex" />
     <label xml:lang="en" text="Reporting publication index" />
     <categories>
+        <category ID="2023">
+            <label xml:lang="de" text="2023" />
+            <label xml:lang="en" text="2023" />
+        </category>
+        <category ID="2022">
+            <label xml:lang="de" text="2022" />
+            <label xml:lang="en" text="2022" />
+        </category>
         <category ID="2021">
             <label xml:lang="de" text="2021" />
             <label xml:lang="en" text="2021" />
