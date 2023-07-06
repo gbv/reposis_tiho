@@ -39,13 +39,18 @@
         <label xml:lang="de" text="Poster / Abstract" />
         <label xml:lang="x-hosts" text="proceedings standalone" />
       </category>
+      <category ID="interview">
+        <label xml:lang="x-hosts" text="journal standalone" />
+        <label xml:lang="en" text="Interview" />
+        <label xml:lang="de" text="Interview" />
+      </category>
     </category>
     <category ID="thesis">
       <label xml:lang="en" text="Thesis" />
       <label xml:lang="de" text="Hochschulschriften" />
       <label xml:lang="x-group" text="true" />
-      <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:workingPaper XMetaDissPlusThesisLevel:other" />
       <label xml:lang="x-hosts" text="series standalone" />
+      <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:workingPaper XMetaDissPlusThesisLevel:other" />
       <category ID="dissertation">
         <label xml:lang="de" text="Dissertation" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:doctoralThesis XMetaDissPlusThesisLevel:thesis.doctoral" />
@@ -67,8 +72,8 @@
       <category ID="master_thesis">
         <label xml:lang="en" text="Master thesis" />
         <label xml:lang="x-hosts" text="series standalone" />
-        <label xml:lang="de" text="Masterarbeit" />
         <label xml:lang="x-mapping" text="marcgt:thesis diniPublType:masterThesis XMetaDissPlusThesisLevel:master" />
+        <label xml:lang="de" text="Masterarbeit" />
       </category>
     </category>
     <category ID="publvar">
