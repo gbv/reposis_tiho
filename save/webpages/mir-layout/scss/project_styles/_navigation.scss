@@ -73,6 +73,13 @@
     color: black;
   }
 
+  // hot fix for mycore 2020.06.x
+  li.disabled .dropdown-item {
+    color: #95a5a6;
+    pointer-events: none;
+    background-color: transparent;
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
