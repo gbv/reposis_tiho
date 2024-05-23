@@ -10,6 +10,10 @@
     padding-top: 150px; // header height
   }
 
+  body.mycoreViewer {
+    padding-top: 0; // no header height for viewer
+  }
+
   #project_logo_box {
     position: fixed;
     left: 3.125rem;
