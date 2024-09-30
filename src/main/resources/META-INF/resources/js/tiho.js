@@ -41,7 +41,15 @@ $(document).ready(function() {
     $('#submit_publication').submit();
   });
 
-  // replace placeholder USERNAME with username
+  $("#searchfield_box").submit(function (evt) {
+      $(this).find(":input").filter(function () {
+          return !this.value;
+      }).attr("disabled", true);
+      return true;
+  });
+
+
+    // replace placeholder USERNAME with username
   var userID = $("#currentUser strong").html();
   var newHref = 'https://elib.tiho-hannover.de/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:' + userID + '&fq=objectType:mods';
   $("a[href='https://elib.tiho-hannover.de/servlets/solr/select?q=state%3Asubmitted%20AND%20createdby:USERNAME']").attr('href', newHref);
