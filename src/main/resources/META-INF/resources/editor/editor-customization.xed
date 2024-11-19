@@ -6,7 +6,7 @@
   <xed:modify ref="admin.fields">
     <xed:remove  ref="institutes" />
     <xed:remove  ref="comment.complex" />
-    <xed:remove  ref="name.extended.repeated" />
+    <xed:remove  ref="name.extended.full.repeated" />
     <xed:remove  ref="rights" />
     <xed:include ref="tiho.institutes.repeat"               after="toc-layout" />
     <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat" />
