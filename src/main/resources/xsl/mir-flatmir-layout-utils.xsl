@@ -4,7 +4,8 @@
                 xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
                 xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
                 xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-                exclude-result-prefixes="i18n mcrver mcrxsl">
+                xmlns:calendar="xalan://java.util.GregorianCalendar"
+                exclude-result-prefixes="i18n mcrver mcrxsl calendar">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:template name="mir.navigation">
@@ -154,7 +155,8 @@
     <div class="container">
       <div class="row tiho-footer-nav">
         <div class="col-12 col-lg-6 mb-3">
-          © 2021 Stiftung Tierärztliche Hochschule Hannover
+          <xsl:variable name="tmp" select="calendar:new()"/>
+          <xsl:value-of select="concat('© ', calendar:get($tmp, 1), ' Stiftung Tierärztliche Hochschule Hannover')"/>
         </div>
         <div class="col-12 col-lg-6">
           <ul class="internal_links nav navbar-nav navbar-expand-md">
