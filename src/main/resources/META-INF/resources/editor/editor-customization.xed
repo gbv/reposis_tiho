@@ -8,6 +8,7 @@
     <xed:remove  ref="comment.complex" />
     <xed:remove  ref="name.extended.full.repeated" />
     <xed:remove  ref="rights" />
+    <xed:remove  ref="related.item.other.search.of.all.items" />
     <xed:include ref="tiho.institutes.repeat"               after="toc-layout" />
     <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat" />
     <xed:include ref="tiho.publicationIndex.admin"          after="tiho.toBeDisplayedIn" />
@@ -156,12 +157,9 @@
     <xed:remove  ref="type.of.resource.repeated" />
     <xed:remove  ref="embargo.datetimepicker" />
     <xed:remove  ref="subject.simple" />
-    <xed:include ref="doi.handle.urn.repeated"              after="identifier.isbn" />
     <xed:include ref="tiho.subject.de.simple"               after="sdnb.repeat" />
     <xed:include ref="tiho.subject.en.simple"               after="tiho.subject.de.simple" />
-    <xed:include ref="validate.subject.de.required"         after="*" />
-    <xed:include ref="validate.subject.en.required"         after="validate.subject.de.required" />
-    <xed:include ref="validate.abstract.de_en.required"     after="validate.subject.en.required" />
+    <xed:include ref="validate.abstract.de_en.required"     after="*" />
     <xed:include ref="validate.institutes.required"         after="validate.abstract.de_en.required" />
   </xed:modify>
 
@@ -303,14 +301,6 @@
     <xed:validate xpath="//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]" test="string-length(//mods:mods/mods:name[@type='corporate'][@authorityURI=$mir_institutes/label[@xml:lang='x-uri']/@text]/@valueURIxEditor) &gt; 0" i18n="mir.validation.institution" display="global" />
   </xed:template>
 
-  <xed:template id="validate.subject.de.required">
-    <xed:validate xpath="//mods:mods/mods:subject[@xml:lang='de']" test="count(//mods:mods/mods:subject[@xml:lang='de']/mods:topic[string-length(text()) &gt; 0])=3" i18n="tiho.validation.subject.de" display="global" />
-  </xed:template>
-
-  <xed:template id="validate.subject.en.required">
-    <xed:validate xpath="//mods:mods/mods:subject[@xml:lang='en']" test="count(//mods:mods/mods:subject[@xml:lang='en']/mods:topic[string-length(text()) &gt; 0])=3" i18n="tiho.validation.subject.en" display="global" />
-  </xed:template>
-
   <xed:template id="validate.abstract.de_en.required">
     <xed:validate xpath="//mods:mods/mods:abstract" test="string-length(//mods:mods/mods:abstract[@xml:lang='de']/text()) &gt; 0 and string-length(//mods:mods/mods:abstract[@xml:lang='en']/text()) &gt; 0" i18n="tiho.validation.abstract.de_en" display="global" />
   </xed:template>
@@ -394,15 +384,35 @@
   </xed:template>
 
   <xed:template id="tiho.subject.de.simple">
-    <xed:bind xpath="mods:subject[@xml:lang='de']">
-      <mir:topic.repeated min="3" max="3" label="tiho.subject.topic.de" help-text="{i18n:mir.help.subject.topic.gnd}" />
-    </xed:bind>
+    <xed:repeat xpath="mods:subjectXML[@xml:lang='de']" min="3" max="3">
+      <div class="form-group row {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="tiho.subject.topic.de"/>
+        </label>
+        <div class="col-md-6">
+          <input type="hidden" class="subjectXML"/>
+          <div class="editorToolsApp" data-searchable="*" data-editor="*" data-search-filter-default="Topic" data-admin="false" data-required="true"> </div>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.subject.topic}" pmud="true"/>
+      </div>
+      <xed:validate class="org.mycore.mir.validation.MIRValidationHelper" method="validateSubjectRequired" display="global" i18n="tiho.validation.subject.de" />
+    </xed:repeat>
   </xed:template>
 
   <xed:template id="tiho.subject.en.simple">
-    <xed:bind xpath="mods:subject[@xml:lang='en']">
-      <mir:topic.repeated min="3" max="3" label="tiho.subject.topic.en" help-text="{i18n:mir.help.subject.topic.gnd}" />
-    </xed:bind>
+    <xed:repeat xpath="mods:subjectXML[@xml:lang='en']" min="3" max="3">
+      <div class="form-group row {$xed-validation-marker}">
+        <label class="col-md-3 col-form-label text-right">
+          <xed:output i18n="tiho.subject.topic.en"/>
+        </label>
+        <div class="col-md-6">
+          <input type="hidden" class="subjectXML"/>
+          <div class="editorToolsApp" data-searchable="*" data-editor="*" data-search-filter-default="Topic" data-admin="false" data-required="true"> </div>
+        </div>
+        <mir:help-pmud help-text="{i18n:mir.help.subject.topic}" pmud="true"/>
+      </div>
+      <xed:validate class="org.mycore.mir.validation.MIRValidationHelper" method="validateSubjectRequired" display="global" i18n="tiho.validation.subject.en" />
+    </xed:repeat>
   </xed:template>
 
   <xed:template id="tiho.diploma_thesis.advisor.reviewer.repeated">
