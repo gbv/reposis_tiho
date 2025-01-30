@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage><section xml:lang="de" title="Willkommen auf den Seiten des Publikationsservers TiHo eLib"><div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-white">TiHo eLib</h1>
+
+            <p>TiHo eLib ist das Repositorium der Stiftung Tierärztliche Hochschule Hannover (TiHo). Es bietet die Möglichkeit, elektronische Veröffentlichungen und Forschungsdaten aus der Veterinärmedizin und angrenzenden Disziplinen kostenfrei zu publizieren.</p>
+
+            <p><span style="color:#006ab3;"><strong>Aktuelle Angebote</strong></span></p>
+
+            <ul>
+                <li><strong>Hochschulschriften der TiHo</strong></li>
+                <li><strong>Hochschulbibliographie ab 2019</strong></li>
+                <li><strong>Open-Access-Veröffentlichungen</strong><br />
+                    Für die Einreichung von Open-Access-Veröffentlichungen wenden Sie sich bitte wie bisher an <a href="mailto:open.access@tiho-hannover.de">open.access@tiho-hannover.de</a><br />
+                </li>
+            </ul>
+
+            <p><span style="color:#006ab3;"><strong>Geplante Angebote</strong></span></p>
+
+            <ul>
+                <li><strong>Digitale Sammlung Veterinärmedizin</strong></li>
+                <li><strong>Forschungsdaten</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section><meta><log lastEditor="akakau" date="2022-10-23" time="17:06" /></meta></MyCoReWebPage>
