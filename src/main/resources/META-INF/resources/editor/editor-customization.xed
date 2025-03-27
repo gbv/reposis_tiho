@@ -245,6 +245,7 @@
     <xed:remove  ref="author.repeated" />
     <xed:remove  ref="rights" />
     <xed:remove  ref="language" />
+    <xed:remove  ref="doi.handle.urn.repeated" />
     <xed:include ref="tiho.institutes.repeat.required"      before="*" />
     <xed:include ref="tiho.toBeDisplayedIn"                 after="tiho.institutes.repeat.required" />
     <xed:include ref="rights"                               after="tiho.toBeDisplayedIn" />
