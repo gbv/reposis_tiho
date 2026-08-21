@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
-  <label xml:lang="en" text="Institutions of TiHo Hannover" description="A list of institutions" />
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mycoreclass ID="mir_institutes"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   <label xml:lang="de" text="Einrichtungen der TiHo Hannover" description="Liste der Einrichtungen" />
+  <label xml:lang="en" text="Institutions of TiHo Hannover" description="A list of institutions" />
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_institutes" />
   <categories>
     <category ID="kliniken">
-      <label xml:lang="en" text="Clinics " />
-      <label xml:lang="x-group" text="true" />
       <label xml:lang="de" text="Kliniken der Tierärztlichen Hochschule" />
+      <label xml:lang="en" text="Clinics of University of Veterinary Medicine" />
+      <label xml:lang="x-group" text="true" />
       <category ID="15">
         <label xml:lang="de" text="Klinik für Geflügel" />
         <label xml:lang="en" text="Clinic for Poultry" />
@@ -21,8 +23,8 @@
         <label xml:lang="en" text="Small Animal Clinic" />
       </category>
       <category ID="14">
-        <label xml:lang="de" text="Klinik für kleine Klauentiere und Forensische Medizin / Ambulatorische Klinik" />
-        <label xml:lang="en" text="Clinic for Swine, Small Ruminants and Forensic Medicine" />
+        <label xml:lang="de" text="Klinik für kleine Klauentiere und forensische Medizin und Ambulatorische Klinik" />
+        <label xml:lang="en" text="Clinic for Swine, Small Ruminants and Forensic Medicine and Ambulatory Service" />
       </category>
       <category ID="12">
         <label xml:lang="de" text="Klinik für Pferde" />
@@ -33,57 +35,53 @@
         <label xml:lang="en" text="Clinic for Cattle" />
       </category>
       <category ID="77">
-        <label xml:lang="de" text="Reproduktionsmedizinische Einheiten der Kliniken" />
+        <label xml:lang="de" text="Reproduktionsmedizinische Einheit der Kliniken" />
         <label xml:lang="en" text="Unit of Reproductive Medicine of the Clinics" />
       </category>
     </category>
     <category ID="institute">
       <label xml:lang="de" text="Institute der Tierärztlichen Hochschule" />
+      <label xml:lang="en" text="Institutes of University of Veterinary Medicine" />
       <label xml:lang="x-group" text="true" />
-      <label xml:lang="en" text="Institutes" />
       <category ID="27">
-        <label xml:lang="en" text="Institute for Anatomy" />
         <label xml:lang="de" text="Anatomisches Institut" />
+        <label xml:lang="en" text="Institute for Anatomy" />
       </category>
       <category ID="31">
-        <label xml:lang="en" text="Institute for Biochemistry" />
         <label xml:lang="de" text="Institut für Biochemie (früher: Physiologische Chemie)" />
+        <label xml:lang="en" text="Institute for Biochemistry (former: Physiological Chemistry)" />
       </category>
       <category ID="23">
         <label xml:lang="de" text="Institut für Biometrie, Epidemiologie und Informationsverarbeitung" />
         <label xml:lang="en" text="Institute for Biometry, Epidemiology and Information Processing" />
       </category>
       <category ID="39">
-        <label xml:lang="en" text="Institute for Immunology" />
         <label xml:lang="de" text="Institut für Immunologie" />
+        <label xml:lang="en" text="Institute for Immunology" />
       </category>
       <category ID="70">
-        <label xml:lang="en" text="Institute for Food Quality and Food Safety" />
-        <label xml:lang="de" text="Institut für Lebensmittelqualität und -sicherheit" />
-      </category>
-      <category ID="71">
-        <label xml:lang="en" text="Institute for Food Toxicology" />
-        <label xml:lang="de" text="Institut für Lebensmitteltoxikologie" />
+        <label xml:lang="de" text="Institut für Lebensmittelqualität und -sicherheit (früher: Lebensmitteltoxikologie)" />
+        <label xml:lang="en" text="Institute for Food Quality and Food Safety (former: Food Toxicology)" />
       </category>
       <category ID="18">
-        <label xml:lang="de" text="Institut für Mikrobiologie" />
-        <label xml:lang="en" text="Institute for Microbiology" />
+        <label xml:lang="de" text="Institut für Mikrobiologie, Zentrum für Infektionsmedizin" />
+        <label xml:lang="en" text="Institute for Microbiology, Dept. of Infectious Diseases" />
       </category>
       <category ID="19">
-        <label xml:lang="en" text="Institute for Parasitology (Dept. of Infectious Diseases)" />
-        <label xml:lang="de" text="Institut für Parasitologie" />
+        <label xml:lang="de" text="Institut für Parasitologie, Zentrum für Infektionsmedizin" />
+        <label xml:lang="en" text="Institute for Parasitology, Dept. of Infectious Diseases" />
       </category>
       <category ID="20">
         <label xml:lang="de" text="Institut für Pathologie" />
         <label xml:lang="en" text="Institute for Pathology" />
       </category>
       <category ID="32">
-        <label xml:lang="en" text="Department of Pharmacology, Toxicology and Pharmacy" />
         <label xml:lang="de" text="Institut für Pharmakologie, Toxikologie und Pharmazie" />
+        <label xml:lang="en" text="Department of Pharmacology, Toxicology and Pharmacy" />
       </category>
       <category ID="30">
-        <label xml:lang="en" text="Institute for Physiology and Cell Biology" />
         <label xml:lang="de" text="Institut für Physiologie und Zellbiologie" />
+        <label xml:lang="en" text="Institute for Physiology and Cell Biology" />
       </category>
       <category ID="57">
         <label xml:lang="de" text="Institut für Terrestrische und Aquatische Wildtierforschung" />
@@ -93,60 +91,60 @@
         <label xml:lang="de" text="Institut für Tierernährung" />
         <label xml:lang="en" text="Institute for Animal Nutrition" />
       </category>
+      <category ID="25">
+        <label xml:lang="de" text="Institut für Tiergenomik (früher: Tierzucht und Vererbungsforschung)" />
+        <label xml:lang="en" text="Institute for Animal Genomics (former: Animal Breeding and Genetics)" />
+      </category>
       <category ID="26">
-        <label xml:lang="en" text="Institute for Animal Hygiene, Animal Welfare and Farm Animal Behaviour" />
         <label xml:lang="de" text="Institut für Tierhygiene, Tierschutz und Nutztierethologie" />
+        <label xml:lang="en" text="Institute for Animal Hygiene, Animal Welfare and Farm Animal Behaviour" />
       </category>
       <category ID="28">
-        <label xml:lang="en" text="Institute for Animal Ecology" />
         <label xml:lang="de" text="Institut für Tierökologie" />
-      </category>
-      <category ID="25">
-        <label xml:lang="en" text="Institute for Animal Breeding and Genetics" />
-        <label xml:lang="de" text="Institut für Tierzucht und Vererbungsforschung" />
-      </category>
-      <category ID="21">
-        <label xml:lang="de" text="Institut für Virologie, Zentrum für Infektionsmedizin" />
-        <label xml:lang="en" text="Institute of Virology (Dept. of Infectious Diseases)" />
-      </category>
-      <category ID="33">
-        <label xml:lang="en" text="Institute of Zoology" />
-        <label xml:lang="de" text="Institut für Zoologie" />
+        <label xml:lang="en" text="Institute for Animal Ecology" />
       </category>
       <category ID="49">
         <label xml:lang="de" text="Institut für Tierschutz und Verhalten" />
         <label xml:lang="en" text="Institute for Animal Welfare and Behaviour" />
       </category>
+      <category ID="21">
+        <label xml:lang="de" text="Institut für Virologie" />
+        <label xml:lang="en" text="Institute of Virology" />
+      </category>
+      <category ID="33">
+        <label xml:lang="de" text="Institut für Zoologie" />
+        <label xml:lang="en" text="Institute of Zoology" />
+      </category>
     </category>
     <category ID="fachgebiete">
-      <label xml:lang="en" text="Special Units and Field Stations" />
       <label xml:lang="de" text="Fachgebiete und Außenstellen der Tierärztlichen Hochschule" />
+      <label xml:lang="en" text="Special Units and Field Stations of University of Veterinary Medicine" />
       <label xml:lang="x-group" text="true" />
       <category ID="34">
-        <label xml:lang="en" text="Institute for the History of Veterinary Medicine and Domestic Animals" />
         <label xml:lang="de" text="Fachgebiet Geschichte der Veterinärmedizin" />
+        <label xml:lang="en" text="Institute for the History of Veterinary Medicine and Domestic Animals" />
       </category>
       <category ID="35">
-        <label xml:lang="en" text="Institute for General Radiology and Medical Physics" />
         <label xml:lang="de" text="Fachgebiet Allgemeine Radiologie und Medizinische Physik" />
+        <label xml:lang="en" text="Institute for General Radiology and Medical Physics" />
       </category>
       <category ID="36">
-        <label xml:lang="en" text="Fish Pathology and Fish Farming (integrated into the Institute of Parasitology)" />
         <label xml:lang="de" text="Abteilung Fischkrankheiten und Fischhaltung (Institut für Parasitologie)" />
+        <label xml:lang="en" text="Fish Pathology and Fish Farming (integrated into the Institute of Parasitology)" />
       </category>
       <category ID="40">
         <label xml:lang="de" text="Außenstelle für Epidemiologie (Bakum)" />
         <label xml:lang="en" text="Field Station for Epidemiology in Bakum" />
       </category>
       <category ID="05">
-        <label xml:lang="en" text="Farm for Education and Research in Ruthe" />
         <label xml:lang="de" text="Lehr- und Forschungsgut Ruthe" />
+        <label xml:lang="en" text="Farm for Education and Research in Ruthe" />
       </category>
     </category>
     <category ID="zentren">
+      <label xml:lang="de" text="Forschungszentren" />
       <label xml:lang="en" text="Research Centers" />
       <label xml:lang="x-group" text="true" />
-      <label xml:lang="de" text="Forschungszentren" />
       <category ID="80">
         <label xml:lang="de" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
         <label xml:lang="en" text="Research Center for Emerging Infections and Zoonoses (RIZ)" />
@@ -156,41 +154,65 @@
         <label xml:lang="en" text="Virtual Center for Canine Neurosciences (ZeCaN)" />
       </category>
       <category ID="vzet">
-        <label xml:lang="en" text="Virtual Center for Replacement and Complementary Methods to Animal Testing (VZET)" />
         <label xml:lang="de" text="Virtuelles Zentrum für Ersatz- und Ergänzungsmethoden zum Tierversuch (VZET)" />
+        <label xml:lang="en" text="Virtual Center for Replacement and Complementary Methods to Animal Testing (VZET)" />
       </category>
       <category ID="vzr">
         <label xml:lang="de" text="Virtuelles Zentrum für Reproduktionsmedizin" />
         <label xml:lang="en" text="Virtual Center for Reproductive Medicine" />
       </category>
       <category ID="zsn">
-        <label xml:lang="en" text="Center for Systems Neuroscience (ZSN)" />
         <label xml:lang="de" text="Zentrum für Systemische Neurowissenschaften (ZSN)" />
+        <label xml:lang="en" text="Center for Systems Neuroscience (ZSN)" />
+      </category>
+      <category ID="cts">
+        <label xml:lang="de" text="Center for Translational Studies" />
+        <label xml:lang="en" text="Center for Translational Studies" />
+      </category>
+      <category ID="nife">
+        <label xml:lang="de" text="Niedersächsische Zentrum für Biomedizintechnik, Implantatforschung und Entwicklung" />
+        <label xml:lang="en" text="Lower Saxony Center for Biomedical Engineering, Implant Research and Development" />
       </category>
     </category>
     <category ID="tihodivers">
       <label xml:lang="de" text="Sonstige Einrichtungen der Tierärztlichen Hochschule" />
-      <label xml:lang="en" text="Other Departements" />
+      <label xml:lang="en" text="Other Departements of University of Veterinary Medicine" />
       <label xml:lang="x-group" text="true" />
+      <category ID="37">
+        <label xml:lang="de" text="AG Vektor-assoziierte Biodiversität und Infektion" />
+        <label xml:lang="en" text="Working Group for Vector-associated Biodiversity and Infection" />
+      </category>
       <category ID="06">
-        <label xml:lang="en" text="BEST-VET" />
         <label xml:lang="de" text="BEST-VET" />
+        <label xml:lang="en" text="BEST-VET" />
       </category>
       <category ID="60">
-        <label xml:lang="de" text="ZELDA - Clinical Skills Lab" />
-        <label xml:lang="en" text="ZELDA - Clinical Skills Lab" />
+        <label xml:lang="de" text="ZeL - Clinical Skills Lab (früher: ZELDA - Clinical Skills Lab)" />
+        <label xml:lang="en" text="ZeL - Clinical Skills Lab (former: ZELDA - Clinical Skills Lab)" />
       </category>
       <category ID="04">
-        <label xml:lang="en" text="ZELDA - E-Learning-Consulting" />
-        <label xml:lang="de" text="ZELDA - E-Learning-Beratung" />
+        <label xml:lang="de" text="ZeL - E-Learning-Beratung (früher: ZELDA - E-Learning-Beratung)" />
+        <label xml:lang="en" text="ZeL - E-Learning-Consulting (former: ZELDA - E-Learning-Consulting)" />
       </category>
       <category ID="wing">
-        <label xml:lang="en" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
-        <label xml:lang="de" text="WING - Wissenschaft und Innovation für nachhaltige Geflügelwirtschaft" />
+        <label xml:lang="de" text="WING - Wissenschaft für innovative und nachhaltige Geflügelhaltung" />
+        <label xml:lang="en" text="WING - Science for innovative and sustainable poultry farming" />
+      </category>
+      <category ID="hgni">
+        <label xml:lang="de" text="Hannover Graduate School for Neurosciences, Infection Medicine and Veterinary Sciences" />
+        <label xml:lang="en" text="Hannover Graduate School for Neurosciences, Infection Medicine and Veterinary Sciences" />
       </category>
       <category ID="07">
-        <label xml:lang="en" text="Library" />
         <label xml:lang="de" text="Bibliothek" />
+        <label xml:lang="en" text="Library" />
+      </category>
+      <category ID="IDS">
+        <label xml:lang="de" text="IDS - Informations- und Datenverarbeitungsservice" />
+        <label xml:lang="en" text="IDS - Information and data processing services" />
+      </category>
+      <category ID="01">
+        <label xml:lang="de" text="Verwaltung" />
+        <label xml:lang="en" text="Administration" />
       </category>
     </category>
     <category ID="coop">

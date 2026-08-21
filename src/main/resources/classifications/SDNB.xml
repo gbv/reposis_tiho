@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="SDNB">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mycoreclass ID="SDNB"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   <label xml:lang="de" text="Sachgruppen der Deutschen Nationalbibliographie" />
   <label xml:lang="x-auth" text="sdnb" />
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/SDNB" />
@@ -9,8 +11,8 @@
       <label xml:lang="en" text="000 Generalities, science" />
     </category>
     <category ID="004">
-      <label xml:lang="en" text="004 Computer science, data processing" />
       <label xml:lang="de" text="004 Informatik" />
+      <label xml:lang="en" text="004 Computer science, data processing" />
     </category>
     <category ID="010">
       <label xml:lang="de" text="010 Bibliographien" />
@@ -20,33 +22,45 @@
       <label xml:lang="de" text="020 Bibliotheks- und Informationswissenschaft" />
       <label xml:lang="en" text="020 Library &amp; information science" />
     </category>
+    <category ID="050">
+      <label xml:lang="de" text="050 Zeitschriften, fortlaufende Sammelwerke" />
+      <label xml:lang="en" text="050 Magazines, journals and serials" />
+    </category>
     <category ID="090">
-      <label xml:lang="en" text="090 Manuscripts &amp; rare books" />
       <label xml:lang="de" text="090 Handschriften, seltene Bücher" />
+      <label xml:lang="en" text="090 Manuscripts &amp; rare books" />
+    </category>
+    <category ID="150">
+      <label xml:lang="de" text="150 Psychologie" />
+      <label xml:lang="en" text="150 Psychology" />
+    </category>
+    <category ID="300">
+      <label xml:lang="de" text="300 Sozialwissenschaften, Soziologie &amp; Anthropologie" />
+      <label xml:lang="en" text="300 Social sciences, sociology &amp; anthropology" />
     </category>
     <category ID="310">
-      <label xml:lang="en" text="310 General statistics" />
       <label xml:lang="de" text="310 Allgemeine Statistiken" />
+      <label xml:lang="en" text="310 General statistics" />
     </category>
     <category ID="320">
-      <label xml:lang="en" text="320 Political science" />
       <label xml:lang="de" text="320 Politik" />
+      <label xml:lang="en" text="320 Political science" />
     </category>
     <category ID="330">
       <label xml:lang="de" text="330 Wirtschaft" />
       <label xml:lang="en" text="330 Economics" />
     </category>
     <category ID="333.7">
-      <label xml:lang="en" text="333.7 Natural resources, energy and environment" />
       <label xml:lang="de" text="333.7 Natürliche Ressourcen, Energie und Umwelt" />
+      <label xml:lang="en" text="333.7 Natural resources, energy and environment" />
     </category>
     <category ID="340">
       <label xml:lang="de" text="340 Recht" />
       <label xml:lang="en" text="340 Law" />
     </category>
     <category ID="350">
-      <label xml:lang="en" text="350 Public administration" />
       <label xml:lang="de" text="350 Öffentliche Verwaltung" />
+      <label xml:lang="en" text="350 Public administration" />
     </category>
     <category ID="370">
       <label xml:lang="de" text="370 Erziehung, Schul- und Bildungswesen" />
@@ -65,8 +79,8 @@
       <label xml:lang="en" text="530 Physics" />
     </category>
     <category ID="540">
-      <label xml:lang="en" text="540 Chemistry &amp; allied sciences" />
       <label xml:lang="de" text="540 Chemie" />
+      <label xml:lang="en" text="540 Chemistry &amp; allied sciences" />
     </category>
     <category ID="550">
       <label xml:lang="de" text="550 Geowissenschaften" />
@@ -77,12 +91,12 @@
       <label xml:lang="en" text="570 Life sciences, biology" />
     </category>
     <category ID="580">
-      <label xml:lang="en" text="580 Botanical sciences" />
       <label xml:lang="de" text="580 Botanik" />
+      <label xml:lang="en" text="580 Botanical sciences" />
     </category>
     <category ID="590">
-      <label xml:lang="en" text="590 Zoological sciences" />
       <label xml:lang="de" text="590 Zoologie" />
+      <label xml:lang="en" text="590 Zoological sciences" />
     </category>
     <category ID="600">
       <label xml:lang="de" text="600 Technik" />
@@ -101,36 +115,40 @@
       <label xml:lang="en" text="624 Structural and environmental engineering" />
     </category>
     <category ID="630">
-      <label xml:lang="en" text="630 Veterinary medicine &amp; agriculture" />
       <label xml:lang="de" text="630 Veterinärmedizin, Landwirtschaft" />
+      <label xml:lang="en" text="630 Veterinary medicine &amp; agriculture" />
+    </category>
+    <category ID="640">
+      <label xml:lang="de" text="640 Hauswirtschaft" />
+      <label xml:lang="en" text="640 Home &amp; family management" />
     </category>
     <category ID="650">
-      <label xml:lang="en" text="650 Management &amp; auxialiary services" />
       <label xml:lang="de" text="650 Management" />
+      <label xml:lang="en" text="650 Management &amp; auxialiary services" />
     </category>
     <category ID="660">
       <label xml:lang="de" text="660 Technische Chemie" />
       <label xml:lang="en" text="660 Chemical engineering" />
     </category>
     <category ID="690">
-      <label xml:lang="en" text="690 Building &amp; construction" />
       <label xml:lang="de" text="690 Hausbau, Bauhandwerk" />
+      <label xml:lang="en" text="690 Building &amp; construction" />
     </category>
     <category ID="780">
-      <label xml:lang="en" text="780 Music" />
       <label xml:lang="de" text="780 Musik" />
+      <label xml:lang="en" text="780 Music" />
     </category>
     <category ID="796">
       <label xml:lang="de" text="796 Sportarten und Sportspiele" />
       <label xml:lang="en" text="796 Sports &amp; games" />
     </category>
     <category ID="900">
-      <label xml:lang="en" text="900 History" />
       <label xml:lang="de" text="900 Geschichte" />
+      <label xml:lang="en" text="900 History" />
     </category>
     <category ID="910">
-      <label xml:lang="en" text="910 Geography &amp; travel" />
       <label xml:lang="de" text="910 Geografie, Reisen" />
+      <label xml:lang="en" text="910 Geography &amp; travel" />
     </category>
   </categories>
 </mycoreclass>
