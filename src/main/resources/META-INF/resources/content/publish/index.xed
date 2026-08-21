@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section title="Publizieren" xml:lang="de">
+    <head>
+      <meta name="title" content="Publizieren" />
+      <meta name="description" content="Publizieren mit Metadatenerfassung" />
+    </head>
+    <script src="../../js/mir/select-doctype.min.js" />
+    <form id="submit_publication" class="form-horizontal" role="form" method="get" action="../../editor/editor-dynamic.xed">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <h2>Publizieren</h2>
+          <p>Bitte wählen sie den Typ der Publikation aus. Anschließend werden sie auf das passende
+            Eingabeformular weitergeleitet. Falls der Datensatz bereits einen Identifikator besitzt,
+            können ggf. Metadaten aus anderen Datenquellen übernommen werden.</p>
+          <h3>Publikationstyp festlegen</h3>
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="genre" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="component.mods.genre" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="genre" class="form-control" name="genre" size="1" />
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="host" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="mir.select.host" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="host" class="form-control" name="host" size="1" />
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-7 col-sm-12">
+          <h3>Publikation aus anderen Datenquellen importieren</h3>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3 col-lg-2 control-label">
+          <select name="type" class="form-control">
+            <option value="doi">DOI</option>
+            <option value="scopus">Scopus-ID</option>
+            <option value="pubmed">PubMed-ID</option>
+            <option value="isbn">ISBN</option>
+            <option value="issn">ISSN</option>
+            <option value="ieee">IEEE</option>
+            <option value="ppn">K10plus-PPN</option>
+            <option value="zdbid">ZDB-ID</option>
+          </select>
+        </div>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <input class="form-control" type="text" name="modsId" />
+        </div>
+      </div>
+      <!-- submit -->
+      <div class="row form-group mt-4">
+        <div class="col-lg-7 col-sm-12">
+          <button type="submit" class="btn btn-primary float-right">Weiter</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <section title="Publication" xml:lang="en">
+    <script src="../../js/mir/select-doctype.min.js" />
+    <form id="submit_publication" class="form-horizontal" role="form" method="get" action="../../editor/editor-dynamic.xed">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <h2>Publication</h2>
+          <p>Please select the type of the publication. Afterwards you will be directed
+            to the appropriate form. If you know an identifier for the publication record
+            you may enter it here. It will be used to look up and reuse metadata from
+            external databases.</p>
+          <h3>Set publication type</h3>
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="genre" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="component.mods.genre" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="genre" class="form-control" name="genre" size="1" />
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="host" class="col-sm-3 col-lg-2 control-label">
+          <text i18n="mir.select.host" />
+        </label>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <select id="host" class="form-control" name="host" size="1" />
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-7 col-sm-12">
+          <h3>Import publication metadata from other databases</h3>
+        </div>
+      </div>
+      <div class="row form-group">
+        <div class="col-sm-3 col-lg-2 control-label">
+          <select name="type" class="form-control">
+            <option value="doi">DOI</option>
+            <option value="scopus">Scopus-ID</option>
+            <option value="pubmed">PubMed-ID</option>
+            <option value="isbn">ISBN</option>
+            <option value="issn">ISSN</option>
+            <option value="ieee">IEEE</option>
+            <option value="ppn">K10plus-PPN</option>
+            <option value="zdbid">ZDB-ID</option>
+          </select>
+        </div>
+        <div class="col-sm-7 col-md-5 col-lg-4">
+          <input class="form-control" type="text" name="modsId" />
+        </div>
+      </div>
+      <!-- submit -->
+      <div class="row form-group mt-4">
+        <div class="col-lg-7 col-sm-12">
+          <button type="submit" class="btn btn-primary float-right">Next</button>
+        </div>
+      </div>
+    </form>
+  </section>
+</MyCoReWebPage>
