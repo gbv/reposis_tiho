@@ -113,18 +113,13 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tiho-hannover.de/bibliothek/suchen-und-finden" title="Suchen und Finden Übersicht">
-                    <span>Suchen und Finden Übersicht</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/literatur-finden" title="Literatur finden">
+                    <span>Literatur finden</span>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.tiho-hannover.de/bibliothek/lernen-und-arbeiten" title="Lernen und Arbeiten">
-                    <span>Lernen und Arbeiten</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.tiho-hannover.de/bibliothek/schreiben-und-publizieren" title="Schreiben und Publizieren Übersicht">
-                    <span>Schreiben und Publizieren Übersicht</span>
+                  <a href="https://www.tiho-hannover.de/bibliothek/schreiben-und-publizieren" title="Schreiben und Publizieren">
+                    <span>Schreiben und Publizieren</span>
                   </a>
                 </li>
               </ul>
@@ -141,7 +136,6 @@
               </p>
               <p>
                 Tel.: +49 511 953-7100<br />
-                Fax: +49 511 953-7119<br/>
                 <br/>
                 <a href="mailto:publikationsdienste@tiho-hannover.de">publikationsdienste(at)tiho-hannover.de</a><br />
                 <a href="https://www.tiho-hannover.de/bibliothek" target="_blank">www.tiho-hannover.de/bibliothek</a>
