@@ -5,6 +5,30 @@
   <label xml:lang="x-auth" text="marcrelator" description="A list of possible contributor roles" />
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/marcrelator" />
   <categories>
+    <category ID="rsp">
+      <label xml:lang="de" text="Antragsgegner" />
+      <label xml:lang="en" text="Respondent" />
+    </category>
+    <category ID="pra">
+      <label xml:lang="de" text="Präsentator" />
+      <label xml:lang="en" text="Moderator" />
+    </category>
+    <category ID="dte">
+      <label xml:lang="de" text="Widmungsempfänger" />
+      <label xml:lang="en" text="Dedicatee" />
+    </category>
+    <category ID="egr">
+      <label xml:lang="de" text="Graveur" />
+      <label xml:lang="en" text="Engraver" />
+    </category>
+    <category ID="wpr">
+      <label xml:lang="de" text="Vorwortverfasser" />
+      <label xml:lang="en" text="writer of preface " />
+    </category>
+    <category ID="prt">
+      <label xml:lang="de" text="Drucker" />
+      <label xml:lang="en" text="Printer" />
+    </category>
     <category ID="cre">
       <label xml:lang="de" text="Urheber(in)" description="Eine Person oder Institution, die für den intellektuellen oder künstlerischen Inhalt eines Werkes verantwortlich ist." />
       <label xml:lang="en" text="Creator" description="Use for a person or organization responsible for the intellectual or artistic content of a work." />
