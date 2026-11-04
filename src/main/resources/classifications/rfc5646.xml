@@ -195,6 +195,12 @@
       <label xml:lang="x-bibl" text="dut" />
       <label xml:lang="x-term" text="nld" />
     </category>
+    <category ID="syr">
+      <label xml:lang="de" text="Syrisch" />
+      <label xml:lang="en" text="Syriac" />
+      <label xml:lang="x-bibl" text="syr" />
+      <label xml:lang="x-term" text="syr" />
+    </category>
     <category ID="sr">
       <label xml:lang="de" text="Serbisch" />
       <label xml:lang="en" text="Serbian" />
