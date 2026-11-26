@@ -105,6 +105,11 @@
                     xpath="condition[@field='category.top'][5]/@value" id="inputLicense1"
                     i18n="editor.search.mir.license" tooltip="editor.search.license.tooltip"
                     uri="xslStyle:items2options:classification:editorComplete:-1:children:mir_licenses" />
+                  <!-- toBeDisplayedIn -->
+                  <mir:template name="selectInput"
+                                xpath="condition[@field='category.top'][6]/@value" id="inputToBeDisplayedIn1"
+                                i18n="editor.search.tiho.toBeDisplayedIn" tooltip="editor.search.tiho.toBeDisplayedIn.tooltip"
+                                uri="xslStyle:items2options:classification:editorComplete:-1:children:toBeDisplayedIn" />
                   <!-- Status -->
                   <mir:template name="selectInput"
                     xpath="condition[@field='state']/@value" id="inputStatus1"

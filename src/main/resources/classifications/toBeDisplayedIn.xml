@@ -6,6 +6,10 @@
   <label xml:lang="en" text="To be displayed in" />
   <label xml:lang="x-uri" text="http://elib.tiho-hannover.de/api/v1/classifications/toBeDisplayedIn" />
   <categories>
+    <category ID="digital_collection">
+      <label xml:lang="de" text="Digitale Sammlung" />
+      <label xml:lang="en" text="Digital Collection" />
+    </category>
     <category ID="bibliography">
       <label xml:lang="de" text="Verzeichnis wissenschaftlicher Veröffentlichungen" />
       <label xml:lang="en" text="Research publications" />
