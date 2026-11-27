@@ -313,6 +313,10 @@
   </xed:template>
 
   <!-- ========== tiho specific templates ========== -->
+  <xed:template id="genres.monograph">
+    <xed:include ref="genres.book" />
+  </xed:template>
+
   <xed:template id="tiho.toBeDisplayedIn">
     <xed:repeat xpath="mods:classification[@authorityURI='https://elib.tiho-hannover.de/api/v1/classifications/toBeDisplayedIn'][@displayLabel='toBeDisplayedIn']" min="1" max="10" method="build">
       <div class="form-group row {$xed-validation-marker}">

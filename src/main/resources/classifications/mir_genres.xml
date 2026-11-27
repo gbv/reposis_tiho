@@ -10,6 +10,12 @@
       <label xml:lang="de" text="Veröffentlichungen" />
       <label xml:lang="en" text="Publications" />
       <label xml:lang="x-group" text="true" />
+      <category ID="monograph">
+        <label xml:lang="de" text="Monographie" />
+        <label xml:lang="en" text="Monograph" />
+        <label xml:lang="x-hosts" text="series standalone" />
+        <label xml:lang="x-mapping" text="marcgt:book diniPublType:book diniPublType2022:Book" />
+      </category>
       <category ID="article">
         <label xml:lang="de" text="Artikel / Kapitel" />
         <label xml:lang="en" text="Article / Chapter" />
